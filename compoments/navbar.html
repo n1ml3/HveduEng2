@@ -1,0 +1,70 @@
+<!-- Navbar chính: Sử dụng container và class expand-lg để tự động thu gọn trên mobile -->
+<nav class="navbar navbar-expand-lg bg-white py-3 navbar-custom">
+  <div class="container-fluid px-4 px-lg-5">
+    
+    <!-- Logo Placeholder: Thiết lập logo thương hiệu kết hợp chữ và hình học đại diện cho logo vẽ trong Figma -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <div class="logo-placeholder-img d-flex align-items-center justify-content-center">
+        <!-- SVG đại diện cho Logo hình mũ cử nhân trong bản vẽ Figma -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
+          <path d="M8.256.063a.5.5 0 0 0-.512 0L0 4v1.5a.5.5 0 0 0 .5.5h.382a1 1 0 0 0 .961-.725l.8-2.4a.5.5 0 0 1 .48-.362H12.87a.5.5 0 0 1 .48.362l.8 2.4a1 1 0 0 0 .961.725H15.5a.5.5 0 0 0 .5-.5V4zm-.5.986L13.244 4 7.756 6.944 2.268 4z"/>
+          <path d="M5 8.244l.117-.078a1 1 0 0 1 1-.064L8 9.224l1.882-1.122a1 1 0 0 1 1 .064l.118.078V10.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </div>
+      <div class="logo-placeholder-text d-flex flex-column justify-content-center">
+        <span class="logo-title">HVEducation</span>
+        <span class="logo-subtitle text-muted">Online learning solution</span>
+      </div>
+    </a>
+
+    <!-- Nút Menu Hamburger cho Mobile: Hiển thị khi chiều rộng màn hình nhỏ hơn lg (992px) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Các liên kết điều hướng: Sẽ tự động ẩn và hiện dưới dạng danh sách trượt xuống trên mobile -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav align-items-center gap-2 gap-lg-4 mt-3 mt-lg-0">
+        
+        <!-- Link Trang chủ -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom active" aria-current="page" href="#">Trang chủ</a>
+        </li>
+        
+        <!-- Link Giới thiệu -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Giới thiệu</a>
+        </li>
+        
+        <!-- Link Khoá học (Dropdown menu) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Khoá học
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+            <li><a class="dropdown-item" href="#">IELTS Cơ bản</a></li>
+            <li><a class="dropdown-item" href="#">IELTS Nâng cao</a></li>
+            <li><a class="dropdown-item" href="#">Giao tiếp tiếng Anh</a></li>
+          </ul>
+        </li>
+        
+        <!-- Link Lịch khai giảng -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Lịch khai giảng</a>
+        </li>
+        
+        <!-- Link Thư viện -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Thư viện</a>
+        </li>
+        
+        <!-- Link Liên hệ -->
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="#">Liên hệ</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

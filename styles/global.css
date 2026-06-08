@@ -1,0 +1,36 @@
+/* 
+  Nạp font chữ Inter từ Google Fonts cho toàn bộ dự án để đảm bảo tính đồng bộ và thẩm mỹ.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* 
+  Định nghĩa hệ màu sắc chủ đạo (Design Tokens) của dự án HVG Education dựa trên thiết kế Figma:
+  - Màu chủ đạo thứ nhất (Primary): Xanh navy đậm (#013475) dùng cho tiêu đề, nút bấm chính, menu.
+  - Màu chủ đạo thứ hai (Secondary): Xanh dương tươi sáng (#005ed6) dùng cho topbar và các điểm nhấn nổi bật.
+  - Các màu bổ trợ như màu nền nhẹ (#fafafa), màu phân tách (#dddddd) và các biến thể font chữ.
+*/
+:root {
+  /* Bảng màu dự án */
+  --primary-color: #013475;      /* Xanh Navy đậm - màu thương hiệu chính */
+  --secondary-color: #005ed6;    /* Xanh dương Topbar */
+  --accent-light: #ebf8ff;       /* Xanh dương nhạt dùng cho background phụ */
+  --body-bg: #fafafa;            /* Màu nền xám trắng của trang chủ */
+  --text-dark: #001c38;          /* Màu chữ tối chính */
+  --text-muted: #2f2f2f;         /* Màu chữ xám phụ */
+  --divider-color: #dddddd;      /* Màu của đường phân tách */
+  --white: #ffffff;
+
+  /* Định nghĩa font chữ toàn cục */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* 
+  Thiết lập các thuộc tính mặc định cho toàn bộ trang web sử dụng các biến toàn cục:
+*/
+body {
+  font-family: var(--font-main);
+  background-color: var(--body-bg);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}

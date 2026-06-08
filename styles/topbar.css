@@ -1,0 +1,63 @@
+/* 
+  Tối ưu hóa stylesheet topbar để tận dụng các biến CSS toàn cục từ global.css.
+  Điều này giúp giảm trùng lặp mã nguồn và duy trì tính nhất quán của hệ thống thiết kế (Design System).
+*/
+.topbar-wrapper {
+  background-color: var(--secondary-color, #005ed6); /* Sử dụng màu xanh topbar từ hệ thống màu chủ đạo */
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 14px;
+  min-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.topbar-content {
+    margin-right: 4rem;
+}
+
+/*
+  Từng item liên hệ trong topbar:
+  - Cấu hình flexbox để icon và text nằm ngang hàng.
+  - Thêm hiệu ứng hover tinh tế để tăng trải nghiệm tương tác (Micro-animations).
+*/
+.topbar-item {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.topbar-label {
+  font-weight: 600;
+}
+
+/*
+  Giá trị thông tin (Ví dụ số điện thoại, địa chỉ email):
+  - Đặt độ đậm chữ là 400 (Regular) để phân biệt rõ ràng với nhãn tiêu đề.
+*/
+.topbar-value {
+  font-weight: 400;
+}
+
+/*
+  Đường kẻ dọc phân tách giữa các mục:
+  - Sử dụng biến màu phân tách từ global.css.
+*/
+.topbar-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--divider-color, #dddddd);
+  opacity: 0.8;
+}
+
+@media (max-width: 991.98px) {
+  .topbar-wrapper {
+    justify-content: center !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .topbar-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px !important;
+  }
+  .topbar-divider {
+    display: none;
+  }
+}

@@ -1,0 +1,61 @@
+<!-- Container chính của Topbar: Sử dụng class flexbox của Bootstrap để căn lề phải nội dung và tạo khoảng cách padding -->
+<div class="topbar-wrapper d-flex align-items-center justify-content-end px-4 py-2 text-white">
+  <!-- Nhóm các đối tượng liên hệ: Cấu hình d-flex với gap để giãn đều các thông tin và căn giữa theo chiều dọc -->
+  <div class="topbar-content d-flex align-items-center gap-3">
+    
+    <!-- 
+      Phần tử hiển thị Hotline:
+      - Thêm class text-nowrap để đảm bảo icon và chữ luôn hiển thị cùng một hàng, không bị ngắt dòng khi cửa sổ thu nhỏ.
+    -->
+    <div class="topbar-item d-flex align-items-center gap-2 text-nowrap">
+      <!-- Vùng chứa icon Hotline: Được thiết kế dưới dạng placeholder để dễ dàng chèn icon SVG hoặc font icon sau này -->
+      <span class="topbar-icon-placeholder" aria-hidden="true">
+        <!-- SVG icon điện thoại làm placeholder mặc định để giữ đúng bố cục thiết kế -->
+        <img src="../assets/hotline.svg">
+      </span>
+      <p class="topbar-text mb-0">
+        <span class="topbar-label">Hotline: </span>
+        <span class="topbar-value">0123456789</span>
+      </p>
+    </div>
+    
+    <!-- Thanh phân tách: Dùng để chia tách trực quan giữa Hotline và Email -->
+    <div class="topbar-divider"></div>
+    
+    <!-- 
+      Phần tử hiển thị Email:
+      - Thêm class text-nowrap để cố định text không bị nhảy dòng.
+    -->
+    <div class="topbar-item d-flex align-items-center gap-2 text-nowrap">
+      <!-- Vùng chứa icon Email: Thiết kế dưới dạng placeholder -->
+      <span class="topbar-icon-placeholder" aria-hidden="true">
+        <!-- SVG icon thư làm placeholder mặc định để hiển thị trực quan thông tin Email -->
+        <img src="../assets/gmail.svg">
+      </span>
+      <p class="topbar-text mb-0">
+        <span class="topbar-label">Email: </span>
+        <span class="topbar-value">hoangvu123@gmail.com</span>
+      </p>
+    </div>
+    
+    <!-- Thanh phân tách: Dùng để chia tách trực quan giữa Email và Website -->
+    <div class="topbar-divider"></div>
+    
+    <!-- 
+      Phần tử hiển thị Website:
+      - Sử dụng class text-nowrap tránh tình trạng chữ bị ngắt dòng hoặc biến dạng trên các kích thước màn hình nhỏ hơn.
+    -->
+    <div class="topbar-item d-flex align-items-center gap-2 text-nowrap">
+      <!-- Vùng chứa icon Website: Thiết kế dưới dạng placeholder -->
+      <span class="topbar-icon-placeholder" aria-hidden="true">
+        <!-- Thay thế bằng mã SVG globe chuẩn của Bootstrap Icons để đảm bảo hiển thị đồng đều trên mọi trình duyệt -->
+        <img src="../assets/earth.svg">
+      </span>
+      <p class="topbar-text mb-0">
+        <span class="topbar-label">website: </span>
+        <span class="topbar-value">hvg.edu.vn</span>
+      </p>
+    </div>
+    
+  </div>
+</div>
