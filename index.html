@@ -23,6 +23,8 @@
   <link href="styles/navbar.css" rel="stylesheet">
   <!-- Liên kết CSS của Hero Section (banner chính trang chủ) -->
   <link href="styles/hero.css" rel="stylesheet">
+  <!-- Liên kết CSS của Courses Section (chương trình học) -->
+  <link href="styles/courses.css" rel="stylesheet">
   <link href="styles/footer.css" rel="stylesheet">
 </head>
 <body>
@@ -109,6 +111,136 @@
         </div>
       </div>
     </section>
+
+    <!-- 
+      Courses Section: Phần "Chương trình học" 
+      Hiển thị thông tin khóa học IELTS dạng card + thanh danh mục khoá học phía dưới.
+    -->
+    <section class="courses-section" id="courses-section">
+      <div class="course-card">
+
+        <!-- Phần nội dung chính: chia 2 cột (text bên trái + hình ảnh bên phải) -->
+        <div class="course-card-inner">
+
+          <!-- CỘT TRÁI: Thông tin khoá học -->
+          <div class="course-info">
+
+            <!-- Label phụ: "Chương trình học" -->
+            <p class="course-label">Chương trình học</p>
+
+            <!-- Tiêu đề chính: Tên khoá học lớn -->
+            <h2 class="course-title">Luyện thi IELTS</h2>
+
+            <!-- Thông tin đầu vào / đầu ra -->
+            <div class="course-level-group">
+              <div class="course-level-item">
+                <!-- Placeholder: Icon đầu vào - người dùng tự thay thế -->
+                <img src="assets/enter.svg" alt="" class="course-level-icon">
+                <span class="course-level-text">Đầu vào: 0</span>
+              </div>
+              <div class="course-level-item">
+                <!-- Placeholder: Icon đầu ra - người dùng tự thay thế -->
+                <img src="assets/exit.svg" alt="" class="course-level-icon">
+                <span class="course-level-text">Đầu ra: 8.0+</span>
+              </div>
+            </div>
+
+            <!-- Đường phân cách ngang -->
+            <div class="course-divider"></div>
+
+            <!-- 3 điểm nổi bật của khoá học: icon + mô tả -->
+            <div class="course-features">
+              <div class="course-feature-item">
+                <!-- Placeholder: Icon giáo viên - người dùng tự thay thế -->
+                <img src="assets/teacher.svg" alt="" class="course-feature-icon">
+                <p class="course-feature-text">Đội ngũ giáo viên top đầu chuẩn sư phạm</p>
+              </div>
+              <div class="course-feature-item">
+                <!-- Placeholder: Icon giáo trình - người dùng tự thay thế -->
+                <img src="assets/magistrate.svg" alt="" class="course-feature-icon">
+                <p class="course-feature-text">Giáo trình được biên soạn đặc quyền</p>
+              </div>
+              <div class="course-feature-item">
+                <!-- Placeholder: Icon học viên - người dùng tự thay thế -->
+                <img src="assets/student.svg" alt="" class="course-feature-icon">
+                <p class="course-feature-text">Giáo trình được biên soạn đặc quyền</p>
+              </div>
+            </div>
+
+            <!-- Nhóm nút hành động: viền navy + nền navy -->
+            <div class="course-cta-group">
+              <a href="#" class="btn-course-outline">Đăng ký tư vấn</a>
+              <a href="#" class="btn-course-filled">Chi tiết khoá học</a>
+            </div>
+          </div>
+
+          <!-- CỘT PHẢI: Hình ảnh minh hoạ + badge điểm -->
+          <div class="course-visual">
+            <!-- Vòng tròn xanh nhạt trang trí phía sau -->
+            <div class="course-visual-circle"></div>
+            <!-- Placeholder: Ảnh giáo viên - người dùng tự thay thế -->
+            <img src="assets/course-teacher.webp" alt="Giáo viên IELTS" class="course-teacher-img">
+            <!-- Badge hiển thị điểm overall -->
+            <div class="course-score-badge">
+              <span class="course-score-number">8.5</span>
+              <span class="course-score-label">overall</span>
+            </div>
+            <!-- Tên giáo viên -->
+            <p class="course-teacher-name">Ms. Trinh My Hanh</p>
+          </div>
+
+        </div>
+
+        <!-- Thanh danh mục khoá học phía dưới card -->
+        <div class="course-programs-bar">
+          <ul class="course-programs-list">
+
+            <!-- Khoá học đang được chọn (active): nền trắng -->
+            <li class="course-program-item active">
+              <!-- Placeholder: Icon puzzle - người dùng tự thay thế -->
+              <img src="assets/puzzle.svg" alt="" class="course-program-icon">
+              <div class="course-program-info">
+                <span class="course-program-name">Luyện thi Ielts</span>
+                <span class="course-program-mode">Online/ Ofline</span>
+              </div>
+            </li>
+
+            <li class="course-program-divider" aria-hidden="true"></li>
+
+            <li class="course-program-item">
+              <img src="assets/puzzle-white.svg" alt="" class="course-program-icon">
+              <div class="course-program-info">
+                <span class="course-program-name">Luyện thi Ielts</span>
+                <span class="course-program-mode">Online/ Ofline</span>
+              </div>
+            </li>
+
+            <li class="course-program-divider" aria-hidden="true"></li>
+
+            <li class="course-program-item">
+              <img src="assets/puzzle-white.svg" alt="" class="course-program-icon">
+              <div class="course-program-info">
+                <span class="course-program-name">Luyện thi Ielts</span>
+                <span class="course-program-mode">Online/ Ofline</span>
+              </div>
+            </li>
+
+            <li class="course-program-divider" aria-hidden="true"></li>
+
+            <li class="course-program-item">
+              <img src="assets/puzzle-white.svg" alt="" class="course-program-icon">
+              <div class="course-program-info">
+                <span class="course-program-name">Luyện thi Ielts</span>
+                <span class="course-program-mode">Online/ Ofline</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <!-- Khai báo vùng chứa của Footer để tải động nội dung từ footer.html qua jQuery AJAX -->
