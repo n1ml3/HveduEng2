@@ -4,6 +4,7 @@ $(document).ready(function() {
   loadTopbarComponent();
   // Hàm tải động component navbar.html vào vùng hiển thị tương ứng
   loadNavbarComponent();
+
   // Hàm tải động component footer.html vào vùng hiển thị tương ứng
   loadFooterComponent();
 });
@@ -41,6 +42,7 @@ function loadNavbarComponent() {
     });
   }
 }
+
 
 /*
   Hàm loadFooterComponent:

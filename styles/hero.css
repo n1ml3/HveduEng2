@@ -1,0 +1,454 @@
+/*
+  Hero Section CSS
+  Dựa trên thiết kế Figma node 4:91 (trang chủ).
+  Hero banner hiển thị hình nền lớn với gradient overlay,
+  nội dung văn bản nằm bên trái, và thanh thống kê chồng lên phía dưới.
+*/
+
+/* ========================================
+   HERO SECTION - Khu vực banner chính
+   ======================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  /* Chiều cao cố định theo thiết kế Figma (764px) để giữ đúng tỷ lệ bố cục */
+  min-height: 764px;
+  overflow: hidden;
+}
+
+/* Lớp chứa hình nền: phủ toàn bộ hero-section bằng position absolute */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Ảnh nền hero: cover toàn bộ vùng chứa, giữ tâm ảnh ở phía trên */
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/*
+  Lớp phủ gradient tối từ trái sang phải:
+  Giúp chữ trắng bên trái dễ đọc trên mọi hình nền.
+  Giá trị gradient lấy chính xác từ Figma (opacity 0.45 → 0.19 → 0).
+*/
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 34.66%,
+    rgba(0, 0, 0, 0.19) 48.02%,
+    rgba(0, 0, 0, 0) 52.91%
+  );
+  z-index: 1;
+}
+
+/* Container nội dung hero: nâng lên trên gradient bằng z-index */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+/* Bố cục nội dung hero: dùng padding-top để đẩy nội dung xuống đúng vị trí Figma */
+.hero-content {
+  padding-top: 180px;
+  padding-bottom: 80px;
+}
+
+/* ========================================
+   HEADLINE BOX - Khối tiêu đề nền trắng
+   ======================================== */
+
+/*
+  Khối nền trắng bo góc chứa dòng tiêu đề chính.
+  Kích thước và bo góc lấy từ Figma (606x74px, border-radius 15px).
+*/
+.hero-headline-box {
+  display: inline-block;
+  background-color: var(--white, #ffffff);
+  border-radius: 15px;
+  padding: 10px 12px;
+  max-width: 606px;
+  margin-bottom: 20px;
+}
+
+/* Tiêu đề chính: font 36px đậm, màu xanh navy thương hiệu */
+.hero-headline {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--primary-color, #013475);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* ========================================
+   SUBHEADLINE - Dòng phụ đề trắng
+   ======================================== */
+
+/*
+  Phụ đề: Chữ trắng đậm + text-shadow giúp nổi bật trên mọi loại ảnh nền.
+  Text-shadow lấy từ Figma (0px 1px 8px #787878).
+*/
+.hero-subheadline {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  color: var(--white, #ffffff);
+  text-shadow: 0px 1px 8px #787878;
+  margin-bottom: 36px;
+}
+
+/* ========================================
+   FEATURES LIST - Danh sách điểm nổi bật
+   ======================================== */
+
+/* Bỏ bullet mặc định và dùng layout flex dọc với khoảng cách giữa các mục */
+.hero-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Mỗi mục gồm icon check + text nằm ngang, canh giữa theo trục dọc */
+.hero-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icon check: kích thước 30x30px theo Figma */
+.hero-check-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Văn bản mô tả điểm nổi bật: chữ trắng 20px */
+.hero-feature-item span {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 44px;
+  color: var(--white, #ffffff);
+}
+
+/* ========================================
+   CTA BUTTONS - Nhóm nút hành động
+   ======================================== */
+
+/* Nhóm 2 nút nằm ngang, khoảng cách 28px */
+.hero-cta-group {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*
+  Kiểu chung cho cả 2 nút CTA:
+  Kích thước, bo góc, font chữ giống nhau.
+  Transition mượt khi hover để tạo cảm giác tương tác.
+*/
+.btn-hero-outline,
+.btn-hero-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 15px;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 44px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Nút viền trắng: nổi bật trên nền tối, viền 2px */
+.btn-hero-outline {
+  width: 203px;
+  border: 2px solid var(--white, #ffffff);
+  background-color: transparent;
+  color: var(--white, #ffffff);
+}
+
+.btn-hero-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--white, #ffffff);
+}
+
+/* Nút nền navy: nền xanh đậm, chữ trắng */
+.btn-hero-filled {
+  width: 218px;
+  border: none;
+  background-color: var(--primary-color, #013475);
+  color: var(--white, #ffffff);
+}
+
+.btn-hero-filled:hover {
+  background-color: var(--secondary-color, #005ed6);
+  color: var(--white, #ffffff);
+}
+
+/* ========================================
+   STATS SECTION - Thanh thống kê
+   ======================================== */
+
+/*
+  Stats section: dùng margin-top âm để chồng lên phần dưới hero.
+  Khoảng chồng ~80px tạo hiệu ứng thị giác liền mạch giữa 2 section.
+*/
+.stats-section {
+  position: relative;
+  z-index: 3;
+  margin-top: -80px;
+  padding-bottom: 40px;
+}
+
+/*
+  Stats bar: Khung trắng bo góc lớn với viền mỏng xanh và bóng đổ nhẹ.
+  Giá trị border, shadow, border-radius lấy từ Figma.
+*/
+.stats-bar {
+  background-color: var(--white, #ffffff);
+  border: 0.6px solid rgba(1, 52, 117, 0.68);
+  border-radius: 20px;
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.12);
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+/* Mỗi stat-item: bố cục dọc, văn bản căn giữa */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Số liệu lớn: font 36px đậm, màu xanh navy thương hiệu */
+.stat-number {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--primary-color, #013475);
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+
+/* Mô tả ngắn dưới mỗi số liệu: font 16px, màu chữ tối */
+.stat-desc {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--text-dark, #001c38);
+  margin: 0;
+  max-width: 203px;
+}
+
+/*
+  Đường phân tách dọc giữa các stat-item:
+  Chiều cao 104px theo Figma, rộng 1px.
+*/
+.stat-divider {
+  width: 1px;
+  height: 104px;
+  background-color: var(--divider-color, #dddddd);
+  flex-shrink: 0;
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (≤991px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-top: 120px;
+  }
+
+  .hero-headline {
+    font-size: 28px;
+    line-height: 42px;
+    /* Cho phép xuống dòng trên tablet vì chiều rộng giới hạn */
+    white-space: normal;
+  }
+
+  .hero-headline-box {
+    max-width: 480px;
+  }
+
+  .hero-subheadline {
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 28px;
+  }
+
+  .hero-feature-item span {
+    font-size: 17px;
+    line-height: 36px;
+  }
+
+  .hero-check-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btn-hero-outline,
+  .btn-hero-filled {
+    font-size: 17px;
+    height: 46px;
+  }
+
+  /* Stats bar: chuyển sang dạng lưới 2x2 khi tablet */
+  .stats-bar {
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px 20px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-item {
+    /* Chia 2 cột, trừ đi khoảng cách giữa (gap) */
+    flex: 0 0 calc(50% - 12px);
+    padding: 12px 0;
+  }
+
+  .stats-section {
+    margin-top: -60px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (≤767px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 520px;
+  }
+
+  .hero-content {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    /* Căn giữa nội dung trên mobile để phù hợp màn hình hẹp */
+    text-align: center;
+  }
+
+  .hero-headline-box {
+    max-width: 100%;
+  }
+
+  .hero-headline {
+    font-size: 22px;
+    line-height: 34px;
+    white-space: normal;
+  }
+
+  .hero-subheadline {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .hero-features {
+    gap: 4px;
+    margin-bottom: 28px;
+    /* Căn trái danh sách điểm nổi bật trên mobile cho dễ đọc */
+    align-items: flex-start;
+    display: inline-flex;
+  }
+
+  .hero-feature-item {
+    gap: 10px;
+  }
+
+  .hero-feature-item span {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .hero-check-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .btn-hero-outline,
+  .btn-hero-filled {
+    font-size: 16px;
+    height: 44px;
+    width: auto;
+    padding: 0 24px;
+  }
+
+  /* Stats bar: xếp chồng dọc trên mobile */
+  .stats-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+
+  .stat-item {
+    flex: none;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .stat-number {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .stat-desc {
+    font-size: 14px;
+    max-width: none;
+  }
+
+  .stats-section {
+    margin-top: -40px;
+  }
+}
