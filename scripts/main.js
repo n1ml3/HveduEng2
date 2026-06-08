@@ -4,6 +4,8 @@ $(document).ready(function() {
   loadTopbarComponent();
   // Hàm tải động component navbar.html vào vùng hiển thị tương ứng
   loadNavbarComponent();
+  // Hàm tải động component footer.html vào vùng hiển thị tương ứng
+  loadFooterComponent();
 });
 
 /*
@@ -35,6 +37,23 @@ function loadNavbarComponent() {
     navbarPlaceholder.load("compoments/navbar.html", function(response, status, xhr) {
       if (status === "error") {
         console.error("Lỗi khi tải component navbar.html: " + xhr.status + " " + xhr.statusText);
+      }
+    });
+  }
+}
+
+/*
+  Hàm loadFooterComponent:
+  - Tải động chân trang (Footer) vào placeholder tương ứng trên trang chính.
+  - Xử lý báo lỗi nếu không tải được tệp footer.html.
+*/
+function loadFooterComponent() {
+  const footerPlaceholder = $("#footer-placeholder");
+  
+  if (footerPlaceholder.length > 0) {
+    footerPlaceholder.load("compoments/footer.html", function(response, status, xhr) {
+      if (status === "error") {
+        console.error("Lỗi khi tải component footer.html: " + xhr.status + " " + xhr.statusText);
       }
     });
   }

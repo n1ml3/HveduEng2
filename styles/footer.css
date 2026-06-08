@@ -1,0 +1,340 @@
+/*
+  Loại bỏ cấu hình font chữ body trùng lặp vì đã được quản lý tập trung ở global.css.
+*/
+
+.site-footer {
+    position: relative;
+    background-color: var(--accent-light, #ebf8ff); /* Thay thế nền hồng nhạt cũ bằng màu xanh dương nhạt chủ đạo của dự án */
+    padding: 80px 0 20px;
+    font-family: var(--font-main, 'Inter', sans-serif);
+    color: var(--text-dark, #001c38); /* Sử dụng biến màu chữ tối toàn cục */
+    overflow: hidden;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-image: url('../../assets/world.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* opacity: 1; */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.site-footer .container {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-family: var(--font-main, 'Inter', sans-serif);
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--primary-color, #013475); /* Đổi màu chữ Logo chính sang màu xanh Navy của dự án */
+    line-height: 1;
+}
+
+.logo-sub {
+    font-family: var(--font-main, 'Inter', sans-serif);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--primary-color, #013475); /* Đổi màu chữ Logo phụ sang màu xanh Navy của dự án */
+}
+
+.footer-school-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color, #013475); /* Đổi màu tên trường sang màu thương hiệu chính */
+    margin-bottom: 28px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 22px;
+    margin-top: 3px;
+    object-fit: contain;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #262626;
+}
+
+.contact-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-title {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #0056B3;
+    margin-bottom: 28px;
+}
+
+.footer-col2 {
+    padding-left: 60px; /* Shift to right */
+}
+
+@media (max-width: 991px) {
+    .footer-col2 {
+        padding-left: 15px;
+    }
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #262626;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color, #005ed6); /* Đổi màu liên kết khi hover sang màu xanh dương sáng */
+}
+
+.newsletter-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #262626;
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.newsletter-form input {
+    width: 260px;
+    padding: 12px 20px;
+    border: 1px solid #26262600;
+    border-radius: 4px;
+    background: #FFFFFF;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--primary-color, #013475); /* Đổi viền input khi focus sang màu thương hiệu */
+}
+
+.newsletter-form button {
+    padding: 0 21px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0056B3; /* Thay đổi màu nút Gửi sang xanh Navy */
+    color: var(--white, #FFFFFF);
+    font-family: var(--font-main, 'Inter', sans-serif);
+    font-size: 14px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-color, #005ed6); /* Thay đổi màu nút khi di chuột sang xanh dương sáng */
+}
+
+.send-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    background-color: #0056B3;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--secondary-color, #005ed6); /* Thay đổi màu nền sang xanh dương sáng và trượt nhẹ khi hover */
+    transform: translateY(-5px);
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #2626261F;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: #26262666;
+}
+@media (max-width: 991px) {
+    .site-footer {
+        padding: 60px 0 30px;
+    }
+    .footer-col {
+        margin-bottom: 45px;
+    }
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form button {
+        padding: 15px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-top: 20px !important;
+        padding-bottom: 0px !important  ;
+    }
+    .site-footer::before {
+        display: none;
+    }
+    .footer-logo {
+        width: 50px;
+        height: auto;
+    }
+    
+    .footer-logo-wrapper {
+        justify-content: center;
+    }
+
+    .footer-col {
+        margin-bottom: 20px !important;
+    }
+
+    .footer-bottom {
+        margin-top: 20px !important;
+    }
+    
+    .logo-text, .newsletter-desc {
+        padding-top: 20px;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .footer-school-name {
+        font-size: 18px;
+        text-align: center;
+
+    }
+
+    .footer-title{
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-col p {
+        font-size: 14px;
+    }
+
+    .newsletter-desc {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-title {
+        text-align: left !important;
+    }
+    
+    .footer-links {
+        font-size: 14px;
+        align-items: left;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .newsletter-form input {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .newsletter-form input {
+        width: 100%;
+    }
+}
