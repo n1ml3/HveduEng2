@@ -33,6 +33,8 @@
   <link href="styles/blog.css" rel="stylesheet">
   <!-- Liên kết CSS của Consultation Form Section (Tư vấn lộ trình) -->
   <link href="styles/consultation.css" rel="stylesheet">
+  <!-- Liên kết CSS của FAQ Section (Câu hỏi thường gặp) -->
+  <link href="styles/faq.css" rel="stylesheet">
   <link href="styles/footer.css" rel="stylesheet">
 </head>
 <body>
@@ -545,6 +547,87 @@
         <div class="consultation-visual">
           <!-- Placeholder học viên chỉ tay (Đã chuẩn bị sẵn ảnh minh họa) -->
           <img src="assets/pointer.webp" alt="Student pointing to form" class="consultation-student-img">
+        </div>
+    </section>
+
+    <!-- 
+      FAQ Section: Phần "Những điều bạn thắc mắc?"
+      Hiển thị các câu hỏi thường gặp dạng accordion cùng hình ảnh lớp học bên phải.
+    -->
+    <section class="faq-section" id="faq-section">
+      <div class="faq-container">
+        <!-- Cột bên trái: Danh sách câu hỏi Accordion -->
+        <div class="faq-content">
+          <h2 class="faq-title">Những điều bạn thắc mắc?</h2>
+          <p class="faq-subtitle">Tìm hiểu về chất lượng học tập tại HVG</p>
+
+          <div class="faq-accordion">
+            <!-- Câu hỏi 1 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h3 class="faq-question">Độ tuổi nào có thể tham gia chương trình học tại trung tâm?</h3>
+                <div class="faq-icon">
+                  <img src="assets/plus-fill.svg" alt="Toggle Icon">
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p class="faq-answer-inner">
+                  Chương trình của HVG được xây dựng đa dạng cho học sinh từ 12 tuổi trở lên, sinh viên và người đi làm muốn cải thiện kỹ năng tiếng Anh và thi chứng chỉ IELTS.
+                </p>
+              </div>
+            </div>
+
+            <!-- Câu hỏi 2 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h3 class="faq-question">Chương trình đào tạo IELTS tại HVG</h3>
+                <div class="faq-icon">
+                  <img src="assets/plus-fill.svg" alt="Toggle Icon">
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p class="faq-answer-inner">
+                  HVG cung cấp lộ trình học cá nhân hóa toàn diện từ cơ bản đến nâng cao (cam kết đầu ra 6.5 - 8.0+), tập trung phát triển đều 4 kỹ năng Nghe - Nói - Đọc - Viết.
+                </p>
+              </div>
+            </div>
+
+            <!-- Câu hỏi 3 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h3 class="faq-question">Học phí tại IELTS tại HVG như thế nào?</h3>
+                <div class="faq-icon">
+                  <img src="assets/plus-fill.svg" alt="Toggle Icon">
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p class="faq-answer-inner">
+                  Học phí tại HVG cực kỳ linh hoạt, phù hợp với lộ trình học tập của từng học viên. Trung tâm thường xuyên có các chương trình học bổng và ưu đãi hấp dẫn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Câu hỏi 4 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <h3 class="faq-question">Thi thử IELTS như thế nào?</h3>
+                <div class="faq-icon">
+                  <img src="assets/plus-fill.svg" alt="Toggle Icon">
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p class="faq-answer-inner">
+                  Học viên được tham gia các kỳ thi thử (Mock Test) miễn phí định kỳ với đề thi thật cập nhật liên tục để đánh giá chính xác trình độ hiện tại.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Cột bên phải: Hình ảnh minh họa lớp học -->
+        <div class="faq-visual">
+          <img src="assets/qna-banner.webp" alt="Classroom at HVG" class="faq-classroom-img">
         </div>
       </div>
     </section>

@@ -60,3 +60,25 @@ function loadFooterComponent() {
     });
   }
 }
+
+/*
+  FAQ Accordion Click Handler:
+  - Khi click vào tiêu đề câu hỏi (.faq-header), toggle class 'open' cho khối câu hỏi (.faq-item).
+  - Điều chỉnh chiều cao tối đa (max-height) của phần trả lời (.faq-answer) để tạo hiệu ứng trượt mượt mà.
+  - Tự động đóng các câu hỏi khác đang mở.
+*/
+$(document).on("click", ".faq-header", function() {
+  const item = $(this).closest(".faq-item");
+  const answer = item.find(".faq-answer");
+  
+  if (item.hasClass("open")) {
+    item.removeClass("open");
+    answer.css("max-height", "0");
+  } else {
+    // Đóng các câu hỏi khác đang mở
+    $(".faq-item.open").removeClass("open").find(".faq-answer").css("max-height", "0");
+    
+    item.addClass("open");
+    answer.css("max-height", answer[0].scrollHeight + "px");
+  }
+});

@@ -1,0 +1,270 @@
+/*
+  FAQ Section CSS
+  Dựa trên thiết kế Figma node 4:559.
+  Hiển thị danh sách câu hỏi thường gặp dạng accordion ở cột bên trái và hình ảnh lớp học bên phải.
+*/
+
+.faq-section {
+  max-width: 1280px;
+  margin: 80px auto;
+  padding: 80px 0;
+  background-color: #F4F9FF;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container chính của section */
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* ========================================
+   CỘT TRÁI: TIÊU ĐỀ VÀ ACCORDION FAQ
+   ======================================== */
+
+.faq-content {
+  flex: 1;
+  max-width: 646px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề chính */
+.faq-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: #013475;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+/* Phụ đề dưới tiêu đề */
+.faq-subtitle {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: #3f3f3f;
+  margin: 0 0 32px;
+  line-height: 1.5;
+}
+
+/* Group danh sách accordion */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Mỗi hàng câu hỏi */
+.faq-item {
+  background-color: var(--white, #ffffff);
+  border: 0.8px solid rgba(71, 71, 71, 0.3);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: #013475;
+  box-shadow: 0px 4px 12px rgba(1, 52, 117, 0.08);
+}
+
+/* Thanh tiêu đề câu hỏi */
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  gap: 16px;
+  min-height: 68px;
+  box-sizing: border-box;
+}
+
+/* Câu hỏi */
+.faq-question {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(22, 22, 22, 0.88);
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: 0.18px;
+  text-align: left;
+}
+
+/* Icon dấu cộng */
+.faq-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Trạng thái mở: xoay icon dấu cộng thành dấu nhân */
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-item.open {
+  border-color: #013475;
+}
+
+/* Vùng chứa nội dung câu trả lời */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Lớp chữ trả lời */
+.faq-answer-inner {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: #4e4e4e;
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* ========================================
+   CỘT PHẢI: HÌNH ẢNH MINH HỌA
+   ======================================== */
+
+.faq-visual {
+  flex: 1;
+  max-width: 573px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ảnh lớp học */
+.faq-classroom-img {
+  width: 100%;
+  height: auto;
+  max-height: 382px;
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ========================================
+   RESPONSIVE - Màn hình Laptop/Tablet nhỏ
+   ======================================== */
+
+@media (max-width: 1199px) {
+  .faq-section {
+    margin: 60px 20px;
+    padding: 60px 0;
+  }
+
+  .faq-container {
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  .faq-title {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (Màn hình dưới 992px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .faq-container {
+    flex-direction: column-reverse; /* Xếp lớp học lên trên hoặc xuống dưới; ở đây đặt hình ảnh xuống dưới câu hỏi */
+    align-items: center;
+    gap: 40px;
+  }
+
+  .faq-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .faq-visual {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (Màn hình dưới 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .faq-section {
+    margin: 40px 15px;
+    padding: 40px 0;
+    border-radius: 20px;
+  }
+
+  .faq-container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .faq-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .faq-subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .faq-header {
+    padding: 14px 16px;
+    min-height: 60px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq-visual {
+    max-width: 100%;
+  }
+}
