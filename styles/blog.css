@@ -1,0 +1,263 @@
+/*
+  IELTS Knowledge Section CSS
+  Dựa trên thiết kế Figma node 4:528.
+  Hiển thị danh sách kiến thức luyện thi IELTS dạng card 3 cột.
+*/
+
+.knowledge-section {
+  padding: 80px 0 120px;
+  background-color: #FAFAFA;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container chính của section */
+.knowledge-container {
+  background-color: #FFFFFF;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+  border-radius: 25px;
+  padding: 30px 30px 40px;
+}
+
+/* ========================================
+   PHẦN TIÊU ĐỀ SECTION
+   ======================================== */
+
+.knowledge-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Tiêu đề chính */
+.knowledge-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Màu navy nhấn mạnh */
+.knowledge-title-highlight {
+  color: var(--primary-color, #013475);
+}
+
+/* Phụ đề dưới tiêu đề */
+.knowledge-subtitle {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  max-width: 771px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ========================================
+   GRID HIỂN THỊ DANH SÁCH BÀI VIẾT
+   ======================================== */
+
+.knowledge-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   CARD BÀI VIẾT CHI TIẾT
+   ======================================== */
+
+.knowledge-card {
+  background-color: #fefefe;
+  border-radius: 15px;
+  box-shadow: 0px 1px 8px 0px rgba(7, 12, 47, 0.14);
+  overflow: hidden;
+  width: 100%;
+  max-width: 346px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hiệu ứng nổi lên khi di chuột vào card */
+.knowledge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(7, 12, 47, 0.22);
+}
+
+/* Khu vực chứa ảnh bìa bài viết */
+.knowledge-card-cover {
+  width: 100%;
+  height: 227px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hình ảnh bìa */
+.knowledge-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Phóng to nhẹ hình ảnh khi hover card */
+.knowledge-card:hover .knowledge-card-img {
+  transform: scale(1.04);
+}
+
+/* Khối nội dung chữ bên dưới ảnh */
+.knowledge-card-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Tiêu đề bài viết */
+.knowledge-card-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color, #013475);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.knowledge-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.knowledge-card-title a:hover {
+  color: var(--secondary-color, #005ed6);
+}
+
+/* Mô tả ngắn của bài viết */
+.knowledge-card-desc {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: #4e4e4e;
+  margin: 0;
+  line-height: 1.55;
+  /* Giới hạn hiển thị tối đa 3 dòng */
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Footer chứa ngày tháng */
+.knowledge-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: auto;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 14px;
+}
+
+/* Icon lịch ngày tháng */
+.knowledge-card-date-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.knowledge-card-date-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Chữ hiển thị ngày */
+.knowledge-card-date-text {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (Màn hình dưới 992px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .knowledge-section {
+    padding: 60px 0 100px;
+  }
+
+  .knowledge-header {
+    margin-bottom: 40px;
+  }
+
+  .knowledge-grid {
+    gap: 30px;
+  }
+
+  .knowledge-card {
+    max-width: 320px;
+  }
+
+  .knowledge-card-cover {
+    height: 200px;
+  }
+
+  .knowledge-title {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (Màn hình dưới 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .knowledge-section {
+    padding: 50px 0 80px;
+  }
+
+  .knowledge-header {
+    margin-bottom: 30px;
+  }
+
+  .knowledge-title {
+    font-size: 24px;
+  }
+
+  .knowledge-subtitle {
+    font-size: 14px;
+  }
+
+  .knowledge-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .knowledge-card {
+    max-width: 100%;
+  }
+
+  .knowledge-card-cover {
+    height: 210px;
+  }
+}

@@ -5,7 +5,7 @@
 */
 
 .teachers-section {
-  padding: 80px 0 120px;
+  padding: 80px 0 30px;
   background-color: var(--white, #ffffff);
   position: relative;
   overflow: visible; /* Cho phép avatar hiển thị chờm ra ngoài section nếu cần */
