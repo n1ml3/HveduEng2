@@ -31,6 +31,8 @@
   <link href="styles/teachers.css" rel="stylesheet">
   <!-- Liên kết CSS của IELTS Knowledge Section (Kiến thức luyện thi) -->
   <link href="styles/blog.css" rel="stylesheet">
+  <!-- Liên kết CSS của Consultation Form Section (Tư vấn lộ trình) -->
+  <link href="styles/consultation.css" rel="stylesheet">
   <link href="styles/footer.css" rel="stylesheet">
 </head>
 <body>
@@ -478,6 +480,71 @@
             </div>
           </div>
 
+    </section>
+
+    <!-- 
+      Consultation Section: Phần "Tư vấn lộ trình học tại HVG Education"
+      Hiển thị form đăng ký tư vấn và hình ảnh minh họa học viên bên phải.
+    -->
+    <section class="consultation-section" id="consultation-section">
+      <!-- Icon lá cờ Anh quốc trang trí góc trên bên phải (Học viên tự thay thế ảnh khi cần) -->
+      <div class="consultation-uk-flag">
+        <img src="assets/uk-flag.svg" alt="UK Flag Decor">
+      </div>
+
+      <!-- Vòng tròn trang trí phía sau -->
+      <div class="consultation-decor-circle"></div>
+
+      <div class="consultation-container">
+        <!-- Cột bên trái: Tiêu đề và Form đăng ký -->
+        <div class="consultation-content">
+          <h2 class="consultation-title">Tư vấn lộ trình học tại <span class="consultation-title-highlight">HVG Education</span></h2>
+          
+          <form class="consultation-form-card" action="#" method="POST">
+            <!-- Trường: Họ và tên -->
+            <div class="consultation-form-group">
+              <input type="text" class="consultation-form-input" placeholder="Họ và tên" required>
+            </div>
+
+            <!-- Trường: Số điện thoại -->
+            <div class="consultation-form-group">
+              <input type="tel" class="consultation-form-input" placeholder="Số điện thoại" required>
+            </div>
+
+            <!-- Trường: Email -->
+            <div class="consultation-form-group">
+              <input type="email" class="consultation-form-input" placeholder="Email" required>
+            </div>
+
+            <!-- Trường: Bạn đang là (Select Dropdown) -->
+            <div class="consultation-form-group">
+              <select class="consultation-form-select" required>
+                <option value="" disabled selected hidden>Bạn đang là</option>
+                <option value="student">Học sinh / Sinh viên</option>
+                <option value="worker">Người đi làm</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+
+            <!-- Trường: Cơ sở gần bạn nhất (Select Dropdown) -->
+            <div class="consultation-form-group">
+              <select class="consultation-form-select" required>
+                <option value="" disabled selected hidden>Cơ sở gần bạn nhất</option>
+                <option value="hn">Hà Nội</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+                <option value="dn">Đà Nẵng</option>
+              </select>
+            </div>
+
+            <!-- Nút gửi form -->
+            <button type="submit" class="btn-consultation-submit">Nhận tư vấn ngay</button>
+          </form>
+        </div>
+
+        <!-- Cột bên phải: Hình ảnh học viên chỉ tay -->
+        <div class="consultation-visual">
+          <!-- Placeholder học viên chỉ tay (Đã chuẩn bị sẵn ảnh minh họa) -->
+          <img src="assets/pointer.webp" alt="Student pointing to form" class="consultation-student-img">
         </div>
       </div>
     </section>

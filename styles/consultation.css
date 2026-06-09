@@ -1,0 +1,309 @@
+/*
+  Consultation Form Section CSS
+  Dựa trên thiết kế Figma node 4:661.
+  Hiển thị form tư vấn lộ trình học với hình ảnh minh họa bên phải.
+*/
+
+.consultation-section {
+  max-width: 1280px;
+  margin: 80px auto;
+  padding: 80px 0;
+  background-image: url('../assets/colsultant-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container chính của section */
+.consultation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ========================================
+   CỘT TRÁI: TIÊU ĐỀ VÀ FORM
+   ======================================== */
+
+.consultation-content {
+  flex: 1;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tiêu đề chính */
+.consultation-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+/* Màu xanh nhấn mạnh thương hiệu */
+.consultation-title-highlight {
+  color: #004092;
+}
+
+/* Form Card màu trắng */
+.consultation-form-card {
+  background-color: var(--white, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.16);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 514px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Nhóm form-group */
+.consultation-form-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Input và Select */
+.consultation-form-input,
+.consultation-form-select {
+  width: 100%;
+  height: 45px;
+  border: 0.8px solid rgba(162, 162, 162, 0.57);
+  border-radius: 15px;
+  padding: 0 24px;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  color: #393939;
+  background-color: var(--white, #ffffff);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Dropdown select cần ẩn mũi tên mặc định để hiển thị icon tùy biến */
+.consultation-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../assets/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+/* Hiệu ứng khi focus */
+.consultation-form-input:focus,
+.consultation-form-select:focus {
+  border-color: var(--primary-color, #013475);
+  box-shadow: 0 0 0 3px rgba(1, 52, 117, 0.1);
+}
+
+/* Nút bấm gửi thông tin */
+.btn-consultation-submit {
+  background-color: #0756b9;
+  color: var(--white, #ffffff);
+  width: 210px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-consultation-submit:hover {
+  background-color: #004092;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(7, 86, 185, 0.2);
+}
+
+/* ========================================
+   CỘT PHẢI: HÌNH ẢNH MINH HỌA
+   ======================================== */
+
+.consultation-visual {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+/* Ảnh bạn học viên chỉ tay */
+.consultation-student-img {
+  position: relative;
+  bottom: -50px;
+  width: 100%;
+  height: auto;
+  display: block;
+  scale: 1.2;
+}
+
+/* ========================================
+   CÁC PHẦN TỬ TRANG TRÍ (DECORATIVE ELEMENTS)
+   ======================================== */
+
+/* Icon lá cờ Anh quốc góc trên bên phải */
+.consultation-uk-flag {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 117px;
+  height: 67px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.consultation-uk-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Vòng tròn trang trí */
+.consultation-decor-circle {
+  position: absolute;
+  left: 496px;
+  top: 528px;
+  width: 167px;
+  height: 167px;
+  border-radius: 50%;
+  border: 1px solid #00409233;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ========================================
+   RESPONSIVE - Màn hình Laptop/Tablet nhỏ
+   ======================================== */
+
+@media (max-width: 1199px) {
+  .consultation-section {
+    margin: 60px 20px;
+    padding: 60px 0;
+  }
+
+  .consultation-container {
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  .consultation-title {
+    font-size: 28px;
+  }
+
+  .consultation-uk-flag {
+    top: 40px;
+    right: 40px;
+    width: 90px;
+    height: 52px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (Màn hình dưới 992px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .consultation-title {
+    white-space: normal;
+  }
+
+  .consultation-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .consultation-content {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .consultation-form-card {
+    max-width: 500px;
+  }
+
+  .btn-consultation-submit {
+    align-self: center;
+  }
+
+  .consultation-visual {
+    max-width: 380px;
+    margin-top: 40px;
+  }
+
+  .consultation-decor-circle {
+    display: none; /* Ẩn bớt trang trí trên tablet để tránh rối mắt */
+  }
+
+  .consultation-uk-flag {
+    display: none;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (Màn hình dưới 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .consultation-section {
+    margin: 40px 15px;
+    padding: 40px 0;
+    border-radius: 20px;
+  }
+
+  .consultation-container {
+    padding: 0 20px;
+  }
+
+  .consultation-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .consultation-form-card {
+    padding: 30px 20px;
+    gap: 16px;
+  }
+
+  .consultation-form-input,
+  .consultation-form-select {
+    font-size: 15px;
+    height: 42px;
+    padding: 0 20px;
+  }
+
+  .btn-consultation-submit {
+    width: 100%;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .consultation-visual {
+    max-width: 280px;
+  }
+}
