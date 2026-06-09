@@ -37,6 +37,32 @@ function adjustRelativePaths(container, isSubPage) {
 }
 
 /*
+  Hàm highlightActiveNavLink:
+  - Tự động làm nổi bật liên kết tương ứng với trang hiện tại trong navbar.
+*/
+function highlightActiveNavLink(container) {
+  let currentPath = window.location.pathname;
+  let filename = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+  
+  if (filename === "" || filename === "index.html") {
+    filename = "index.html";
+  }
+
+  container.find(".nav-link").removeClass("active").removeAttr("aria-current");
+
+  container.find(".nav-link").each(function() {
+    let href = $(this).attr("href");
+    if (href) {
+      let linkFilename = href.substring(href.lastIndexOf('/') + 1);
+      if (linkFilename === filename) {
+        $(this).addClass("active");
+        $(this).attr("aria-current", "page");
+      }
+    }
+  });
+}
+
+/*
   Hàm loadTopbarComponent:
   - Sử dụng phương thức $.load() của jQuery để tải nội dung HTML từ file component.
 */
@@ -67,6 +93,7 @@ function loadNavbarComponent(prefix, isSubPage) {
         console.error("Lỗi khi tải component navbar.html: " + xhr.status + " " + xhr.statusText);
       } else {
         adjustRelativePaths(navbarPlaceholder, isSubPage);
+        highlightActiveNavLink(navbarPlaceholder);
       }
     });
   }
