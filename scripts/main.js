@@ -1,26 +1,54 @@
 // Đợi cấu trúc DOM tải xong hoàn toàn để đảm bảo các thành phần HTML tồn tại trước khi kịch bản chạy
 $(document).ready(function() {
-  // Hàm tải động component topbar.html vào vùng hiển thị tương ứng
-  loadTopbarComponent();
-  // Hàm tải động component navbar.html vào vùng hiển thị tương ứng
-  loadNavbarComponent();
+  // Xác định xem trang hiện tại có phải là trang con (trong thư mục pages/) hay không
+  const isSubPage = window.location.pathname.includes("/pages/");
+  const prefix = isSubPage ? "../" : "";
 
+  // Hàm tải động component topbar.html vào vùng hiển thị tương ứng
+  loadTopbarComponent(prefix, isSubPage);
+  // Hàm tải động component navbar.html vào vùng hiển thị tương ứng
+  loadNavbarComponent(prefix, isSubPage);
   // Hàm tải động component footer.html vào vùng hiển thị tương ứng
-  loadFooterComponent();
+  loadFooterComponent(prefix, isSubPage);
 });
+
+/*
+  Hàm điều chỉnh các đường dẫn tương đối (href, src) khi tải component vào trang con:
+  - Nếu là trang con, tự động thêm tiền tố "../" vào trước các đường dẫn tương đối (không bắt đầu bằng http, data, #, mailto, tel).
+*/
+function adjustRelativePaths(container, isSubPage) {
+  if (!isSubPage) return;
+  
+  // Sửa href cho các liên kết
+  container.find("a").each(function() {
+    let href = $(this).attr("href");
+    if (href && !href.startsWith("http") && !href.startsWith("#") && !href.startsWith("javascript:") && !href.startsWith("mailto:") && !href.startsWith("tel:")) {
+      $(this).attr("href", "../" + href);
+    }
+  });
+  
+  // Sửa src cho các hình ảnh/icons
+  container.find("img").each(function() {
+    let src = $(this).attr("src");
+    if (src && !src.startsWith("http") && !src.startsWith("data:") && !src.startsWith("../")) {
+      $(this).attr("src", "../" + src);
+    }
+  });
+}
 
 /*
   Hàm loadTopbarComponent:
   - Sử dụng phương thức $.load() của jQuery để tải nội dung HTML từ file component.
-  - Thực hiện xử lý lỗi chi tiết nếu yêu cầu Ajax không thành công (ví dụ do lỗi CORS khi chạy local).
 */
-function loadTopbarComponent() {
+function loadTopbarComponent(prefix, isSubPage) {
   const topbarPlaceholder = $("#topbar-placeholder");
   
   if (topbarPlaceholder.length > 0) {
-    topbarPlaceholder.load("compoments/topbar.html", function(response, status, xhr) {
+    topbarPlaceholder.load(prefix + "compoments/topbar.html", function(response, status, xhr) {
       if (status === "error") {
         console.error("Lỗi khi tải component topbar.html: " + xhr.status + " " + xhr.statusText);
+      } else {
+        adjustRelativePaths(topbarPlaceholder, isSubPage);
       }
     });
   }
@@ -29,33 +57,34 @@ function loadTopbarComponent() {
 /*
   Hàm loadNavbarComponent:
   - Tải động menu điều hướng (Navbar) vào placeholder tương ứng trên trang chính.
-  - Tương tự như topbar, xử lý báo lỗi nếu không tải được tệp html.
 */
-function loadNavbarComponent() {
+function loadNavbarComponent(prefix, isSubPage) {
   const navbarPlaceholder = $("#navbar-placeholder");
   
   if (navbarPlaceholder.length > 0) {
-    navbarPlaceholder.load("compoments/navbar.html", function(response, status, xhr) {
+    navbarPlaceholder.load(prefix + "compoments/navbar.html", function(response, status, xhr) {
       if (status === "error") {
         console.error("Lỗi khi tải component navbar.html: " + xhr.status + " " + xhr.statusText);
+      } else {
+        adjustRelativePaths(navbarPlaceholder, isSubPage);
       }
     });
   }
 }
 
-
 /*
   Hàm loadFooterComponent:
   - Tải động chân trang (Footer) vào placeholder tương ứng trên trang chính.
-  - Xử lý báo lỗi nếu không tải được tệp footer.html.
 */
-function loadFooterComponent() {
+function loadFooterComponent(prefix, isSubPage) {
   const footerPlaceholder = $("#footer-placeholder");
   
   if (footerPlaceholder.length > 0) {
-    footerPlaceholder.load("compoments/footer.html", function(response, status, xhr) {
+    footerPlaceholder.load(prefix + "compoments/footer.html", function(response, status, xhr) {
       if (status === "error") {
         console.error("Lỗi khi tải component footer.html: " + xhr.status + " " + xhr.statusText);
+      } else {
+        adjustRelativePaths(footerPlaceholder, isSubPage);
       }
     });
   }
