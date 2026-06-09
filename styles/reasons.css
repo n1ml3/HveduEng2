@@ -1,0 +1,245 @@
+/*
+  Reasons Section CSS
+  Dựa trên thiết kế Figma node 4:420.
+  Hiển thị 6 lý do lựa chọn HVG Education dạng grid so le (staggered).
+*/
+
+/* ========================================
+   REASONS SECTION - Khu vực 6 lý do
+   ======================================== */
+
+.reasons-section {
+  margin-top: 48px;
+  padding: 80px 0 120px;
+  background-color: var(--accent-light, #ebf8ff);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Container chính của section, kế thừa từ Bootstrap container để đồng bộ độ rộng */
+.reasons-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   PHẦN TIÊU ĐỀ SECTION
+   ======================================== */
+
+.reasons-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Tiêu đề chính: "6 lý do nên chọn HVG Education" */
+.reasons-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Màu navy nhấn mạnh cho chữ "HVG Education" */
+.reasons-title-highlight {
+  color: var(--primary-color, #013475);
+}
+
+/* Phụ đề dưới tiêu đề */
+.reasons-subtitle {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: #3f3f3f;
+  max-width: 771px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ========================================
+   GRID LÀM NỔI BẬT 6 LÝ DO (SO LE)
+   ======================================== */
+
+/* Grid chia 3 cột đều nhau trên desktop, khoảng cách gap giữa các cột là 40px */
+.reasons-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Mỗi cột trong 3 cột */
+.reasons-col {
+  flex: 1;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 68px; /* Khoảng cách dọc giữa các card trong cùng cột */
+}
+
+/* 
+  Cột giữa (cột thứ 2) được đẩy xuống 40px để tạo hiệu ứng so le (staggered) 
+  đúng theo mockup thiết kế Figma.
+*/
+.reasons-col-staggered {
+  margin-top: 40px;
+}
+
+/* ========================================
+   CARD CHI TIẾT LÝ DO
+   ======================================== */
+
+/* Card trắng bo tròn góc 20px, có đổ bóng nhẹ theo Figma */
+.reason-card {
+  background-color: var(--white, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 24px 42px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 248px;
+  box-sizing: border-box;
+}
+
+/* Hiệu ứng di chuột nổi bật cho card */
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(1, 52, 117, 0.15);
+}
+
+/* Khung chứa Icon/SVG */
+.reason-card-icon-wrap {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Định dạng hình ảnh icon */
+.reason-card-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Tiêu đề của từng lý do: chữ navy, cỡ 20px */
+.reason-card-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color, #013475);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+/* Nội dung mô tả lý do: chữ thường, cỡ 16px */
+.reason-card-desc {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========================================
+   HÌNH ẢNH TRANG TRÍ NỀN (BACKGROUND DECORATION)
+   ======================================== */
+
+.reasons-bg-decor {
+  position: absolute;
+  top: -28px;
+  left: -288px;
+  width: 1767.5px;
+  height: 1010px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.reasons-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (Màn hình dưới 992px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .reasons-section {
+    padding: 60px 0 80px;
+  }
+
+  /* Chuyển grid thành flex-wrap để tự xuống dòng, gap thu hẹp còn 30px */
+  .reasons-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .reasons-col {
+    flex: calc(50% - 15px); /* Chia thành 2 cột trên màn hình tablet */
+    max-width: 440px;
+    gap: 30px;
+  }
+
+  /* Tắt so le dọc của cột giữa trên tablet để tránh bị lệch dòng xấu */
+  .reasons-col-staggered {
+    margin-top: 0;
+  }
+
+  .reasons-title {
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (Màn hình dưới 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .reasons-section {
+    padding: 50px 0 60px;
+  }
+
+  .reasons-container {
+    padding: 0 20px;
+  }
+
+  .reasons-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .reasons-col {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .reason-card {
+    padding: 24px 24px 30px;
+    min-height: auto; /* Cho phép co giãn tự do theo chiều cao nội dung */
+  }
+
+  .reasons-title {
+    font-size: 24px;
+  }
+
+  .reasons-subtitle {
+    font-size: 14px;
+  }
+}

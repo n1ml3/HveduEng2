@@ -25,6 +25,8 @@
   <link href="styles/hero.css" rel="stylesheet">
   <!-- Liên kết CSS của Courses Section (chương trình học) -->
   <link href="styles/courses.css" rel="stylesheet">
+  <!-- Liên kết CSS của Reasons Section (6 lý do chọn HVG Education) -->
+  <link href="styles/reasons.css" rel="stylesheet">
   <link href="styles/footer.css" rel="stylesheet">
 </head>
 <body>
@@ -238,6 +240,94 @@
           </ul>
         </div>
 
+      </div>
+    </section>
+
+    <!-- 
+      Reasons Section: Phần "6 lý do nên chọn HVG Education"
+      Hiển thị dưới dạng lưới so le (staggered grid) 3 cột trên desktop.
+    -->
+    <section class="reasons-section container" id="reasons-section">
+      <!-- Lớp hình ảnh trang trí nền (Người dùng tự thay thế src khi có tệp SVG/ảnh thực tế) -->
+      <div class="reasons-bg-decor">
+        <img src="assets/reasons-bg.svg" alt="Background Decoration" class="reasons-bg-img">
+      </div>
+
+      <div class="reasons-container">
+        <!-- Tiêu đề chính và phụ đề -->
+        <div class="reasons-header">
+          <h2 class="reasons-title">6 lý do nên chọn <span class="reasons-title-highlight">HVG Education</span></h2>
+          <p class="reasons-subtitle">Những ưu điểm của hệ thống giáo dục hàng đầu giúp bạn chinh phục kỳ thi IELTS một cách dễ dàng!</p>
+        </div>
+
+        <!-- Lưới hiển thị các lý do (3 cột so le) -->
+        <div class="reasons-grid">
+          
+          <!-- CỘT 1: Chứa Lý do 1 và Lý do 4 -->
+          <div class="reasons-col">
+            <!-- Lý do 1 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <!-- Placeholder: Người dùng tự thay thế bằng file SVG/PNG của mình -->
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+
+            <!-- Lý do 4 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+          </div>
+
+          <!-- CỘT 2: Chứa Lý do 2 và Lý do 5 (Được đẩy xuống để tạo hiệu ứng so le) -->
+          <div class="reasons-col reasons-col-staggered">
+            <!-- Lý do 2 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+
+            <!-- Lý do 5 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+          </div>
+
+          <!-- CỘT 3: Chứa Lý do 3 và Lý do 6 -->
+          <div class="reasons-col">
+            <!-- Lý do 3 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+
+            <!-- Lý do 6 -->
+            <div class="reason-card">
+              <div class="reason-card-icon-wrap">
+                <img src="assets/medal.svg" alt="Icon Cam Kết" class="reason-card-icon">
+              </div>
+              <h3 class="reason-card-title">Cam kết hỗ trợ học viên</h3>
+              <p class="reason-card-desc">Học viên được đồng hành và hỗ trợ liên tục cho đến khi đạt được mục tiêu đề ra.</p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
