@@ -1,0 +1,286 @@
+/*
+  Teachers Section CSS
+  Dựa trên thiết kế Figma node 4:491.
+  Hiển thị danh sách đội ngũ giảng viên với hiệu ứng chồng ảnh lên trên card (overlapping avatar).
+*/
+
+.teachers-section {
+  padding: 80px 0 120px;
+  background-color: var(--white, #ffffff);
+  position: relative;
+  overflow: visible; /* Cho phép avatar hiển thị chờm ra ngoài section nếu cần */
+}
+
+/* Container chính của section */
+.teachers-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   PHẦN TIÊU ĐỀ SECTION
+   ======================================== */
+
+.teachers-header {
+  text-align: center;
+  margin-bottom: 180px; /* Tạo khoảng trống đủ lớn cho các avatar chờm lên trên */
+}
+
+/* Tiêu đề chính */
+.teachers-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: #292929;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Màu navy nhấn mạnh */
+.teachers-title-highlight {
+  color: var(--primary-color, #013475);
+}
+
+/* Phụ đề dưới tiêu đề */
+.teachers-subtitle {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  color: #3f3f3f;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ========================================
+   GRID HIỂN THỊ DANH SÁCH GIẢNG VIÊN
+   ======================================== */
+
+.teachers-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   CARD CHI TIẾT GIẢNG VIÊN
+   ======================================== */
+
+.teacher-card {
+  position: relative;
+  background-color: var(--white, #ffffff);
+  border: 2px solid #8abdff;
+  border-radius: 30px;
+  padding: 180px 30px 40px; /* Padding top lớn để chừa chỗ cho avatar đè lên */
+  width: 100%;
+  max-width: 372px;
+  min-height: 498px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hiệu ứng di chuột nổi bật cho card */
+.teacher-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(1, 52, 117, 0.12);
+  border-color: var(--primary-color, #013475);
+}
+
+/* Khung chứa ảnh chân dung của giáo viên (Overlapping top) */
+.teacher-avatar-wrap {
+  position: absolute;
+  top: -148px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 279px;
+  height: 292px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.teacher-card:hover .teacher-avatar-wrap {
+  transform: translateX(-50%) scale(1.03); /* Micro-animation: Phóng to nhẹ avatar khi hover */
+}
+
+/* Định dạng hình ảnh avatar */
+.teacher-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Phần chữ "Giảng viên" */
+.teacher-role {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+/* Tên của giảng viên */
+.teacher-name {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color, #013475);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+/* Khối chi tiết bằng cấp/kinh nghiệm */
+.teacher-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+.teacher-detail-item {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Nút hành động: Tìm hiểu thêm */
+.btn-teacher-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #0756b9;
+  color: var(--white, #ffffff);
+  width: 201px;
+  height: 44px;
+  border-radius: 15px;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-teacher-more:hover {
+  background-color: var(--primary-color, #013475);
+  color: var(--white, #ffffff);
+}
+
+/* Icon mũi tên */
+.btn-teacher-more svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Micro-animation: Mũi tên dịch phải khi di chuột vào nút */
+.btn-teacher-more:hover svg {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   RESPONSIVE - Tablet (Màn hình dưới 992px)
+   ======================================== */
+
+@media (max-width: 991px) {
+  .teachers-section {
+    padding: 60px 0 100px;
+  }
+
+  .teachers-header {
+    margin-bottom: 160px;
+  }
+
+  .teachers-grid {
+    gap: 160px 30px; /* Tăng khoảng cách dọc (row gap) để nhường chỗ cho các avatar khi card tự xuống dòng */
+  }
+
+  .teacher-card {
+    max-width: 350px;
+    min-height: 460px;
+    padding: 160px 24px 30px;
+  }
+
+  .teacher-avatar-wrap {
+    width: 240px;
+    height: 250px;
+    top: -125px;
+  }
+
+  .teacher-role,
+  .teacher-name {
+    font-size: 22px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile (Màn hình dưới 768px)
+   ======================================== */
+
+@media (max-width: 767px) {
+  .teachers-section {
+    padding: 50px 0 80px;
+  }
+
+  .teachers-header {
+    margin-bottom: 140px;
+  }
+
+  .teachers-title {
+    font-size: 28px;
+  }
+
+  .teachers-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 140px; /* Khoảng cách giữa các card xếp chồng theo chiều dọc */
+    margin-top: 20px;
+  }
+
+  .teacher-card {
+    max-width: 320px;
+    min-height: 440px;
+    padding: 140px 20px 24px;
+  }
+
+  .teacher-avatar-wrap {
+    width: 200px;
+    height: 210px;
+    top: -105px;
+  }
+
+  .teacher-role,
+  .teacher-name {
+    font-size: 20px;
+  }
+
+  .teacher-detail-item {
+    font-size: 15px;
+  }
+
+  .btn-teacher-more {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+}
