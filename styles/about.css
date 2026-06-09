@@ -19,8 +19,8 @@
    CỘT TRÁI: COLLAGE HÌNH ẢNH
    ======================================== */
 .about-hvg-visual {
-  flex: 0 0 540px;
-  height: 440px;
+  flex: 0 0 620px;
+  height: 500px;
   position: relative;
 }
 
@@ -29,8 +29,8 @@
   position: absolute;
   top: 15px;
   left: 0;
-  width: 380px;
-  height: 340px;
+  width: 440px;
+  height: 390px;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -39,10 +39,10 @@
 /* Ảnh phụ 2 (bottom-right) */
 .about-img-secondary {
   position: absolute;
-  top: 210px;
-  left: 220px;
-  width: 310px;
-  height: 220px;
+  top: 240px;
+  left: 250px;
+  width: 360px;
+  height: 250px;
   border-radius: 20px;
   object-fit: cover;
   border: 8px solid var(--white, #ffffff); /* Viền trắng dày tạo ngăn cách đè lên ảnh 1 */
@@ -53,9 +53,9 @@
 .about-card-badge {
   position: absolute;
   top: 15px;
-  left: 390px;
-  width: 150px;
-  height: 220px;
+  left: 450px;
+  width: 170px;
+  height: 250px;
   border-radius: 20px;
   background-image: url('../assets/badge-bg.png');
   background-size: cover;
@@ -96,7 +96,7 @@
    ======================================== */
 .about-hvg-content {
   flex: 1;
-  max-width: 542px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
 }
@@ -111,7 +111,7 @@
 
 .about-title {
   font-family: var(--font-main), sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: #141414;
   margin: 0 0 24px 0;
