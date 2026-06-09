@@ -24,6 +24,7 @@
     <link href="../styles/navbar.css" rel="stylesheet">
     <link href="../styles/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/breadcrumb.css">
+    <link rel="stylesheet" href="../styles/about.css">
 </head>
 
 <body>
@@ -51,7 +52,83 @@
     </section>
 
     <main>
+        <!-- About HVG Section (Figma Node 4:852) -->
+        <section class="about-hvg-section">
+            <div class="about-hvg-container">
+                <!-- Cột bên trái: Collage hình ảnh và chỉ số -->
+                <div class="about-hvg-visual">
+                    <!-- Ảnh chính 1 (top-left) - Người dùng sẽ tự thêm ảnh -->
+                    <img src="../assets/school.webp" alt="Lớp học tại HVG" class="about-img-primary">
+                    <!-- Ảnh phụ 2 (bottom-right) - Người dùng sẽ tự thêm ảnh -->
+                    <img src="../assets/discuss.webp" alt="Thảo luận nhóm tại HVG" class="about-img-secondary">
+                    <!-- Thẻ chỉ số 10k+ (top-right) -->
+                    <div class="about-card-badge">
+                        <h2 class="about-badge-value">10k<span class="about-badge-plus">+</span></h2>
+                        <p class="about-badge-label">Học viên tích cực trong khoá học của chúng tôi</p>
+                    </div>
+                </div>
 
+                <!-- Cột bên phải: Nội dung giới thiệu -->
+                <div class="about-hvg-content">
+                    <span class="about-tag">Giới thiệu</span>
+                    <h2 class="about-title">Chào mừng đến với HVG</h2>
+                    
+                    <p class="about-desc">Chúng tôi tạo ra không gian học tập năng động, hiện đại với lớp học tương tác cao, tài liệu cập nhật và phương pháp giảng dạy thực tiễn.</p>
+                    <p class="about-desc">Học viên không chỉ được hướng dẫn tận tình bởi giảng viên 8.5+ IELTS mà còn được tham gia các buổi luyện tập chuyên sâu, giúp nâng cao kỹ năng nhanh chóng.</p>
+
+                    <!-- Lưới tính năng -->
+                    <div class="about-features">
+                        <!-- Tính năng 1 -->
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="56" height="56" rx="12" fill="#E4F0FF"/>
+                                    <rect x="15" y="16" width="26" height="18" rx="2" stroke="#013475" stroke-width="2"/>
+                                    <path d="M26 22L31 25L26 28V22Z" fill="#013475"/>
+                                    <circle cx="20" cy="39" r="2" fill="#013475"/>
+                                    <path d="M17 43C17 41 18.5 41 20 41C21.5 41 23 41 23 43" stroke="#013475" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="28" cy="38" r="2" fill="#013475"/>
+                                    <path d="M25 42C25 40 26.5 40 28 40C29.5 40 31 40 31 42" stroke="#013475" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="36" cy="39" r="2" fill="#013475"/>
+                                    <path d="M33 43C33 41 34.5 41 36 41C37.5 41 39 41 39 43" stroke="#013475" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="about-feature-info">
+                                <h3 class="about-feature-title">Khoá học cao cấp</h3>
+                                <p class="about-feature-subtitle">Với các khoá học linh hoạt</p>
+                            </div>
+                        </div>
+
+                        <!-- Tính năng 2 -->
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="56" height="56" rx="12" fill="#E4F0FF"/>
+                                    <path d="M28 15C24.6863 15 22 17.6863 22 21C22 23.3824 23.3879 25.4412 25 26.3824V29C25 29.5523 25.4477 30 26 30H30C30.5523 30 31 29.5523 31 29V26.3824C32.6121 25.4412 34 23.3824 34 21C34 17.6863 31.3137 15 28 15Z" stroke="#013475" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M26 33H30" stroke="#013475" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 41C16 38.5 19 37.5 28 37.5C37 37.5 40 38.5 40 41" stroke="#013475" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M28 37.5V42" stroke="#013475" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="about-feature-info">
+                                <h3 class="about-feature-title">Học tập linh hoạt</h3>
+                                <p class="about-feature-subtitle">Học online mọi lúc mọi nơi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút Xem khóa học -->
+                    <div class="about-actions">
+                        <a href="courses.html" class="btn-about-more">
+                            Xem tất cả khoá học
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Khai báo vùng chứa của Footer để tải động nội dung từ footer.html qua jQuery AJAX -->
