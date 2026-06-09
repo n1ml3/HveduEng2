@@ -162,7 +162,7 @@
 /* Ảnh lớp học */
 .faq-classroom-img {
   position: absolute;
-  bottom: -40px;
+  top: 84px;
   right: -50px;
   width: 573px;
   height: 382px;
