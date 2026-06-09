@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Khối Breadcrumb Header Banner (Introduce Page Header - Figma Node 1:2858)
+   ========================================================================== */
+
+.breadcrumb-banner {
+    background-color: #E4F0FF;
+    padding: 140px 0;
+    position: relative;
+    width: 100%;
+}
+
+.breadcrumb-title {
+    font-family: var(--font-main), sans-serif;
+    font-size: 46px; /* Cỡ chữ 46px theo thiết kế gốc của Figma */
+    font-weight: 700;
+    color: #323232; /* Tông màu xám tối #323232 */
+    margin: 0 0 20px 0;
+    line-height: 1;
+}
+
+/* Danh sách breadcrumbs hiển thị ngang */
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px; /* Khoảng cách lề giữa các liên kết và mũi tên phân tách */
+}
+
+.breadcrumb-item {
+    font-family: var(--font-main), sans-serif;
+    font-size: 28px; /* Cỡ chữ 28px theo Figma thiết kế */
+    font-weight: 400;
+    color: #323232;
+    line-height: 1.4;
+}
+
+/* Định dạng liên kết breadcrumb */
+.breadcrumb-link {
+    color: #323232F2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hiệu ứng hover đổi màu xanh ngọc thương hiệu */
+.breadcrumb-link:hover {
+    color: var(--primary-color);
+}
+
+/* Thẻ hiện tại (active) */
+.breadcrumb-item.active {
+    color: #323232;
+}
+
+/* Icon mũi tên ngăn cách ở giữa */
+.breadcrumb-separator {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-separator svg {
+    display: block;
+}
+
+/* Đảm bảo container của breadcrumb-banner có relative để định vị ảnh minh họa bên phải */
+.breadcrumb-banner .container {
+    position: relative;
+}
+
+/* Định dạng ảnh minh họa ở góc phải banner theo thiết kế */
+.breadcrumb-img {
+    position: absolute;
+    right: 80px;
+    bottom: -120px; /* Đẩy sát xuống cạnh dưới do padding-bottom của banner là 160px */
+    max-height: 280px; /* Giới hạn chiều cao để cân đối với banner */
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Thiết kế tương thích (Responsive Media Queries)
+   ========================================================================== */
+
+/* Trình duyệt màn hình trung bình (dưới 992px) */
+@media (max-width: 992px) {
+    .breadcrumb-banner {
+        /* Giảm padding trên tablet để phần breadcrumb gọn gàng và cân đối hơn */
+        padding: 60px 0 30px;
+    }
+
+    .breadcrumb-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+
+    .breadcrumb-item {
+        font-size: 20px; /* Thu nhỏ breadcrumb để cân đối trên Tablet */
+    }
+
+    /* Giảm kích thước mũi tên phân cách phù hợp với font chữ trên Tablet */
+    .breadcrumb-separator img,
+    .breadcrumb-separator svg {
+        height: 24px !important;
+        width: auto !important;
+    }
+
+    /* Thu nhỏ ảnh minh họa trên màn hình Tablet */
+    .breadcrumb-img {
+        max-height: 200px;
+        right: 40px;
+        bottom: -30px; /* Cập nhật bottom khớp với padding-bottom: 30px */
+    }
+}
+
+/* Trình duyệt màn hình nhỏ (dưới 576px) */
+@media (max-width: 576px) {
+    .breadcrumb-banner {
+        /* Giảm tối đa padding trên di động để tối ưu không gian hiển thị */
+        padding: 40px 0 20px;
+    }
+
+    .breadcrumb-title {
+        /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+        font-size: 26px !important;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb-item {
+        /* Giảm thêm cỡ chữ mục liên kết trên di động nhỏ */
+        font-size: 15px !important;
+    }
+
+    /* Giảm thêm kích thước mũi tên phân cách phù hợp với font chữ trên di động */
+    .breadcrumb-separator img,
+    .breadcrumb-separator svg {
+        height: 18px !important;
+        width: auto !important;
+    }
+
+    .breadcrumb-list {
+        gap: 10px; /* Rút gọn gap */
+    }
+
+    /* Ẩn hẳn ảnh minh họa trên màn hình Mobile để tránh đè chữ */
+    .breadcrumb-img {
+        display: none;
+    }
+}
