@@ -192,7 +192,7 @@
   }
 
   .reasons-col {
-    flex: calc(50% - 15px); /* Chia thành 2 cột trên màn hình tablet */
+    flex: 0 0 calc(50% - 15px); /* Chia thành 2 cột đều nhau trên màn hình tablet, không tự phình to */
     max-width: 440px;
     gap: 30px;
   }
@@ -206,6 +206,22 @@
     font-size: 28px;
   }
 }
+
+/* Hiển thị 2 card cuối (cột thứ 3) nằm ngang và chia đều 50/50 trên màn hình tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .reasons-grid .reasons-col:last-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .reasons-grid .reasons-col:last-child .reason-card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: 440px;
+  }
+}
+
 
 /* ========================================
    RESPONSIVE - Mobile (Màn hình dưới 768px)
