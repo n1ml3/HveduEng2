@@ -20,11 +20,11 @@
   align-items: flex-start;
 }
 
-.course-detail-title {
+.course-detail-banner .course-detail-title {
   font-family: var(--font-main, 'Inter', sans-serif);
   font-weight: 700;
   font-size: 36px;
-  color: var(--primary-color, #013475);
+  color: #013475;
   margin: 0 0 24px 0;
   line-height: 1.3;
 }
