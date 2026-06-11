@@ -106,3 +106,18 @@
     padding-left: 16px;
   }
 }
+
+/*
+  Tối ưu hóa hiển thị cho màn hình Laptop nhỏ (như 1024px):
+  - Giảm font-size, padding và gap của các nav-link để toàn bộ menu hiển thị gọn gàng trên một dòng duy nhất.
+  - Chỉ áp dụng từ kích thước tablet ngang (992px) đến laptop nhỏ (1199.98px) để không ảnh hưởng đến các màn hình khác.
+*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-custom .navbar-nav {
+    gap: 12px !important; /* Giảm gap giữa các nav-item từ 24px xuống 12px */
+  }
+  .nav-link-custom {
+    font-size: 15px !important; /* Giảm cỡ chữ từ 18px xuống 15px */
+    padding: 8px 8px !important; /* Giảm padding ngang để các liên kết vừa khít */
+  }
+}
