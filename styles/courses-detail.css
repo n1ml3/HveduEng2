@@ -1,0 +1,316 @@
+/*
+  Course Detail Page CSS
+  Dựa trên thiết kế Figma node 4:1976.
+*/
+
+/* ========================================
+   COURSE DETAIL HEADER BANNER
+   ======================================== */
+
+.course-detail-banner {
+  background-color: #ddecff; /* Light blue background as in Figma */
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-detail-banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.course-detail-title {
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--primary-color, #013475);
+  margin: 0 0 24px 0;
+  line-height: 1.3;
+}
+
+.course-detail-meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-detail-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6f6f6f;
+  font-family: var(--font-main, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.course-detail-meta-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Placeholder style if icons are missing */
+.course-detail-meta-icon-placeholder {
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Thân trang chi tiết khóa học */
+.course-detail-section {
+  background-color: #fdfdfd; /* Màu nền trắng ánh xám nhẹ theo Figma */
+}
+
+/* Ảnh nổi bật chính của khóa học (cột trái) */
+.course-feature-image-wrapper {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ tạo khối */
+}
+
+.course-feature-image {
+  width: 100%;
+  height: 430px; /* Chiều cao cố định theo Figma */
+  object-fit: cover; /* Giữ tỷ lệ ảnh không bị móp méo */
+  display: block;
+}
+
+/* Tiêu đề chính khóa học */
+.course-detail-title {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(50, 50, 50, 0.95);
+  margin-bottom: 15px;
+}
+
+/* Đường gạch dưới tiêu đề phân cấp nội dung */
+.course-detail-divider {
+  width: 126px;
+  height: 2px;
+  background-color: rgba(0, 174, 239, 0.5); /* Sử dụng màu xanh mờ */
+  margin-bottom: 40px;
+}
+
+/* Các khối thông tin mô tả, mục tiêu, chương trình, v.v. */
+.course-detail-block {
+  margin-bottom: 40px;
+}
+
+.course-block-title {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 600;
+  color: rgba(50, 50, 50, 0.95);
+  margin-bottom: 20px;
+}
+
+.course-block-text {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #2d2d2d; /* Màu chữ sẫm dễ đọc */
+}
+
+/* Danh sách gạch đầu dòng có khoảng cách thoáng mát */
+.course-block-list {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.course-block-list li {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px; /* Dòng thoáng giúp dễ đọc */
+  color: #2d2d2d;
+  margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Sidebar: Card thông tin lớp học (cột phải)
+   ========================================================================== */
+.course-info-card {
+  background-color: #ffffff;
+  border: 0.6px solid rgba(136, 136, 136, 0.35);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-card); /* Tải bóng đổ từ global.css */
+}
+
+.info-card-title {
+  font-family: var(--font-main);
+  font-size: 28px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 30px;
+  border-bottom: 0.6px solid rgba(136, 136, 136, 0.25); /* Đường kẻ viền mờ ngăn cách các hàng */
+}
+
+/* Mỗi hàng thông tin trong card */
+.info-card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 0.6px solid rgba(136, 136, 136, 0.25); /* Đường kẻ viền mờ ngăn cách các hàng */
+}
+
+.info-item-key {
+  font-family: var(--font-main);
+  font-size: 19px;
+  font-weight: 500;
+  color: rgba(72, 72, 72, 0.92);
+}
+
+.info-item-value {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(54, 54, 54, 0.93);
+}
+
+/* Nút đăng ký khóa học nổi bật */
+.btn-register {
+  width: 100%;
+  height: 56px;
+  background-color: #004092;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.btn-register:hover {
+  background-color: var(--secondary-color); /* Hover chuyển sang màu xanh dương đậm */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Responsive: Điều chỉnh kích thước trên tablet và mobile
+   ========================================================================== */
+@media (max-width: 1199px) {
+  .course-feature-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  .course-feature-image {
+    height: 300px;
+  }
+  
+  .course-detail-title {
+    /* Giảm cỡ chữ tiêu đề chính khóa học trên tablet */
+    font-size: 28px;
+  }
+  
+  .course-block-title {
+    /* Giảm cỡ chữ tiêu đề khối trên tablet */
+    font-size: 28px;
+  }
+
+  .course-block-text,
+  .course-block-list li {
+    /* Giảm nhẹ cỡ chữ nội dung mô tả trên tablet */
+    font-size: 17px;
+  }
+  
+  /* Đẩy sidebar cách xa phần nội dung phía trên khi bị dồn cột dọc và giảm nhẹ padding */
+  .course-info-card {
+    padding: 35px 25px;
+    margin-top: 20px;
+  }
+
+  .info-card-title {
+    /* Giảm cỡ chữ tiêu đề thẻ thông tin trên tablet */
+    font-size: 24px;
+  }
+
+  .info-item-key {
+    /* Giảm cỡ chữ nhãn thông tin trên tablet */
+    font-size: 17px;
+  }
+
+  .info-item-value {
+    /* Giảm cỡ chữ giá trị thông tin trên tablet */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .course-feature-image {
+    height: 200px;
+  }
+  
+  .course-detail-title {
+    /* Giảm thêm cỡ chữ tiêu đề trên di động nhỏ */
+    font-size: 22px !important;
+  }
+  
+  .course-block-title {
+    /* Giảm thêm cỡ chữ tiêu đề khối trên di động nhỏ */
+    font-size: 22px !important;
+  }
+  
+  .course-block-text,
+  .course-block-list li {
+    /* Giảm thêm cỡ chữ mô tả trên di động nhỏ */
+    font-size: 15px !important;
+    line-height: 26px;
+  }
+  
+  .course-info-card {
+    padding: 30px 20px;
+  }
+  
+  .info-card-title {
+    /* Giảm thêm cỡ chữ tiêu đề thẻ thông tin trên di động nhỏ */
+    font-size: 20px !important;
+  }
+  
+  .info-item-key,
+  .info-item-value {
+    /* Giảm thêm cỡ chữ các nhãn giá trị trên di động nhỏ */
+    font-size: 15px !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 991px) {
+  .course-detail-banner {
+    padding: 60px 0;
+  }
+  
+  .course-detail-title {
+    font-size: 30px;
+  }
+  
+  .course-sidebar-card {
+    position: static;
+    margin-top: 40px;
+  }
+}

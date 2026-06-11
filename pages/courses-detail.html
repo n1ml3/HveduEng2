@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+
+    <!-- Cấu hình các thẻ Meta SEO cơ bản để đảm bảo công cụ tìm kiếm hiểu rõ nội dung trang web -->
+    <title>Chi tiết khóa học - HVG Education</title>
+    <meta name="description" content="HVG Education cung cấp các chương trình đào tạo Anh ngữ hàng đầu chất lượng cao.">
+
+    <!-- Nhúng CSS Bootstrap 5 để tận dụng các class tiện ích như flexbox, responsive grid và spacing -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- 
+    Liên kết tệp CSS toàn cục (global.css):
+    - Dùng để tải font chữ Google Font Inter.
+    - Định nghĩa hệ màu sắc thương hiệu chủ đạo (Design Tokens) để toàn dự án sử dụng nhất quán.
+  -->
+    <link href="../styles/global.css" rel="stylesheet">
+
+    <!-- Liên kết tệp CSS riêng của các component như Topbar, Navbar và Footer -->
+    <link href="../styles/topbar.css" rel="stylesheet">
+    <link href="../styles/navbar.css" rel="stylesheet">
+    <link href="../styles/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/courses-detail.css">
+    <link rel="stylesheet" href="../styles/consultation.css">
+</head>
+
+<body>
+    <!-- Khai báo các vùng chứa để tải động nội dung của Topbar và Navbar qua jQuery AJAX -->
+    <header>
+        <div id="topbar-placeholder"></div>
+        <div id="navbar-placeholder"></div>
+    </header>
+    <main>
+        <!-- Section: Banner Chi tiết khóa học (Figma Node 4:1976) -->
+        <section class="course-detail-banner">
+            <div class="container course-detail-banner-container">
+                <h1 class="course-detail-title">Khoá prime(0-2.0)</h1>
+                <ul class="course-detail-meta-list">
+                    <li class="course-detail-meta-item">
+                        <img class="course-detail-meta-icon" src="../assets/time-line.svg" alt="Clock Icon">
+                        <span>Thời gian khoá học: 1,5 tháng</span>
+                    </li>
+                    <li class="course-detail-meta-item">
+                        <img class="course-detail-meta-icon" src="../assets/document.svg" alt="Document Icon">
+                        <span>Khoá học Ielts từ 0-2.0</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Phần thông tin chi tiết khóa học: Sử dụng hệ lưới Bootstrap chia 2 cột -->
+        <section class="course-detail-section py-3 py-lg-5">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    
+                    <!-- Cột trái (Chiếm 8/12 phần): Thông tin giới thiệu khóa học chính -->
+                    <div class="col-lg-8">
+                        <!-- Ảnh đại diện/Ảnh nổi bật của khóa học -->
+                        <div class="course-feature-image-wrapper">
+                            <img src="../assets/course-detail-banner.webp" alt="Lớp học Toeic 650+" class="course-feature-image">
+                        </div>
+                        
+                        <!-- Tiêu đề và đường gạch chân phân tách theo thiết kế Figma -->
+                        <h2 class="course-detail-title">Lớp học ILETS 0-2.0</h2>
+                        
+                        <!-- Khối thông tin "Mô tả" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Mô tả</h3>
+                            <p class="course-block-text">
+                                Lớp học kỹ năng sống cho trẻ là một chương trình giáo dục thực tiễn giúp trẻ phát triển tư duy độc lập, giao tiếp tự tin, và khả năng xử lý tình huống trong cuộc sống. Thông qua các hoạt động thực hành, trẻ học cách tự chăm sóc bản thân, làm việc nhóm, kiểm soát cảm xúc và ứng xử lịch sự.
+                            </p>
+                        </div>
+                        
+                        <!-- Khối thông tin "Mục tiêu lớp học" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Mục tiêu lớp học</h3>
+                            <ul class="course-block-list">
+                                <li>Giúp trẻ tự tin giao tiếp và thể hiện suy nghĩ của mình.</li>
+                                <li>Rèn luyện kỹ năng tự lập, biết tự chăm sóc bản thân.</li>
+                                <li>Phát triển tư duy giải quyết vấn đề và ra quyết định đúng đắn.</li>
+                                <li>Học cách kiểm soát cảm xúc và ứng xử tích cực.</li>
+                                <li>Xây dựng tinh thần hợp tác và kỹ năng làm việc nhóm.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Khối thông tin "Nội dung chương trình" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Nội dung chương trình</h3>
+                            <ul class="course-block-list">
+                                <li>Kỹ năng giao tiếp & ứng xử</li>
+                                <li>Kỹ năng tự lập & quản lý bản thân</li>
+                                <li>Kiểm soát cảm xúc & tư duy tích cực</li>
+                                <li>Tư duy giải quyết vấn đề</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Khối thông tin "Lợi ích sau khóa học" -->
+                        <div class="course-detail-block">
+                            <h3 class="course-block-title">Lợi ích sau khoá học</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Cột phải (Chiếm 4/12 phần): Card thông tin tổng hợp lớp học -->
+                    <div class="col-lg-4">
+                        <div class="course-info-card">
+                            <h3 class="info-card-title">Thông tin lớp học:</h3>
+                            
+                            <!-- Hàng thông tin: Độ tuổi -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Độ tuổi:</span>
+                                <span class="info-item-value">3-18 tuổi</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Thời gian buổi học -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Thời gian buổi học:</span>
+                                <span class="info-item-value">2 giờ</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Số buổi học -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Số buổi học:</span>
+                                <span class="info-item-value">20 buổi</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Số học viên -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Số học viên:</span>
+                                <span class="info-item-value">20 người</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Chứng chỉ đi kèm -->
+                            <div class="info-card-item">
+                                <span class="info-item-key">Chứng chỉ:</span>
+                                <span class="info-item-value">Có</span>
+                            </div>
+                            
+                            <!-- Hàng thông tin: Ngôn ngữ đào tạo -->
+                            <div class="info-card-item mb-4">
+                                <span class="info-item-key">Ngôn ngữ</span>
+                                <span class="info-item-value">Tiếng Việt</span>
+                            </div>
+                            
+                            <!-- Nút kêu gọi hành động Đăng ký khóa học -->
+                            <button class="btn btn-register">Đăng ký ngay</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Section: Phần "Tư vấn lộ trình học tại HVG Education" -->
+        <section class="consultation-section" id="consultation-section">
+            <div class="consultation-uk-flag">
+                <img src="../assets/uk-flag.svg" alt="UK Flag Decor">
+            </div>
+
+            <div class="consultation-decor-circle"></div>
+
+            <div class="consultation-container">
+                <div class="consultation-content">
+                    <h2 class="consultation-title">Tư vấn lộ trình học tại <span class="consultation-title-highlight">HVG Education</span></h2>
+
+                    <form class="consultation-form-card" action="#" method="POST">
+                        <div class="consultation-form-group">
+                            <input type="text" class="consultation-form-input" placeholder="Họ và tên" required>
+                        </div>
+
+                        <div class="consultation-form-group">
+                            <input type="tel" class="consultation-form-input" placeholder="Số điện thoại" required>
+                        </div>
+
+                        <div class="consultation-form-group">
+                            <input type="email" class="consultation-form-input" placeholder="Email" required>
+                        </div>
+
+                        <div class="consultation-form-group">
+                            <select class="consultation-form-select" required>
+                                <option value="" disabled selected hidden>Bạn đang là</option>
+                                <option value="student">Học sinh / Sinh viên</option>
+                                <option value="worker">Người đi làm</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+
+                        <div class="consultation-form-group">
+                            <select class="consultation-form-select" required>
+                                <option value="" disabled selected hidden>Cơ sở gần bạn nhất</option>
+                                <option value="hn">Hà Nội</option>
+                                <option value="hcm">TP. Hồ Chí Minh</option>
+                                <option value="dn">Đà Nẵng</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-consultation-submit">Nhận tư vấn ngay</button>
+                    </form>
+                </div>
+
+                <div class="consultation-visual">
+                    <img src="../assets/pointer.webp" alt="Student pointing to form" class="consultation-student-img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Khai báo vùng chứa của Footer để tải động nội dung từ footer.html qua jQuery AJAX -->
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <!-- 
+    Nhúng thư viện jQuery CDN phiên bản 3.7.1:
+    - Bắt buộc phải nhúng thư viện này trước tệp scripts/main.js tự viết nhằm sử dụng hàm $.load()
+  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Nhúng thư viện Bootstrap Bundle (chứa cả Popper.js) hỗ trợ các tính năng động trong tương lai của Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 
+    Liên kết tệp JavaScript điều khiển chính (main.js):
+    - Đã tách mã khởi chạy jQuery load các component (Topbar, Navbar, Footer) ra khỏi index.html.
+  -->
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
