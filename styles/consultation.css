@@ -228,6 +228,11 @@
    ======================================== */
 
 @media (max-width: 991px) {
+  .consultation-section {
+    padding: 50px 0;
+    margin: 40px 20px;
+  }
+
   .consultation-title {
     white-space: normal;
   }
@@ -271,8 +276,8 @@
 
 @media (max-width: 767px) {
   .consultation-section {
-    margin: 40px 15px;
-    padding: 40px 0;
+    margin: 24px 15px;
+    padding: 35px 0;
     border-radius: 20px;
   }
 

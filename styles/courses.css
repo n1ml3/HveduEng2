@@ -373,6 +373,10 @@
    ======================================== */
 
 @media (max-width: 991px) {
+  .courses-section {
+    padding: 50px 0 0;
+  }
+
   .course-card-inner {
     flex-direction: column;
     min-height: auto;
@@ -418,7 +422,7 @@
 
 @media (max-width: 767px) {
   .courses-section {
-    padding: 40px 0 0;
+    padding: 35px 0 0;
   }
 
   .course-info {

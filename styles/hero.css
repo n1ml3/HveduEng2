@@ -354,6 +354,7 @@
 
   .stats-section {
     margin-top: -60px;
+    padding-bottom: 24px;
   }
 }
 
@@ -450,5 +451,35 @@
 
   .stats-section {
     margin-top: -40px;
+    padding-bottom: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile M & S (≤375.98px)
+   ======================================== */
+@media (max-width: 375.98px) {
+  .hero-cta-group {
+    flex-wrap: nowrap !important; /* Giữ 2 nút trên cùng một hàng */
+    gap: 8px !important; /* Giảm khoảng cách gap giữa 2 nút */
+    width: 100%;
+  }
+
+  .btn-hero-outline,
+  .btn-hero-filled {
+    flex: 1 !important; /* Chia sẻ chiều rộng đều nhau (50/50) */
+    font-size: 13px !important; /* Thu nhỏ cỡ chữ để không bị tràn dòng */
+    height: 40px !important; /* Thu nhỏ chiều cao của nút */
+    padding: 0 4px !important; /* Thu nhỏ padding ngang */
+    border-radius: 10px !important; /* Cân chỉnh góc bo tròn phù hợp */
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile S (≤340px)
+   ======================================== */
+@media (max-width: 340px) {
+  .stats-section {
+    margin-top: -15px !important; /* Giảm margin-top âm để dịch chuyển stats card xuống, tạo khoảng cách với nút */
   }
 }

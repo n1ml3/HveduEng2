@@ -199,6 +199,11 @@
    ======================================== */
 
 @media (max-width: 991px) {
+  .faq-section {
+    padding: 50px 0;
+    margin: 40px 0;
+  }
+
   .faq-container {
     flex-direction: column-reverse; /* Xếp lớp học lên trên hoặc xuống dưới; ở đây đặt hình ảnh xuống dưới câu hỏi */
     align-items: center;
@@ -222,8 +227,8 @@
 
 @media (max-width: 767px) {
   .faq-section {
-    margin: 40px 0;
-    padding: 40px 0;
+    margin: 24px 0;
+    padding: 35px 0;
   }
 
   .faq-container {

@@ -203,7 +203,7 @@
 
 @media (max-width: 991px) {
   .teachers-section {
-    padding: 60px 0 100px;
+    padding: 50px 0 40px;
   }
 
   .teachers-header {
@@ -238,7 +238,7 @@
 
 @media (max-width: 767px) {
   .teachers-section {
-    padding: 50px 0 80px;
+    padding: 35px 0 30px;
   }
 
   .teachers-header {
