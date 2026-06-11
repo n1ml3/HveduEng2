@@ -1,0 +1,268 @@
+/* Styles for Library Page (Thư viện) - HVG Education */
+
+.library-section {
+  padding: 60px 0 80px 0;
+  background-color: var(--body-bg);
+}
+
+/* Page Title & Search Bar Area */
+.library-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.library-title {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 700;
+  color: #292929;
+  margin: 0;
+}
+
+/* Custom Search Container */
+.library-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 422px;
+  height: 52px;
+}
+
+.library-search-input {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 0 50px 0 20px;
+  font-size: 14px;
+  color: #262626;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.library-search-input::placeholder {
+  color: #585858;
+  opacity: 1;
+}
+
+.library-search-input:focus {
+  background-color: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(1, 52, 117, 0.1);
+}
+
+.library-search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  color: #585858;
+}
+
+/* Document Grid Layout */
+.library-grid {
+  margin-bottom: 50px;
+}
+
+/* Document Card Styling */
+.library-card {
+  background-color: #fefefe;
+  border-radius: 15px;
+  box-shadow: 0px 1px 8px 0px rgba(7, 12, 47, 0.14);
+  overflow: hidden;
+  height: 436px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.library-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 24px 0px rgba(7, 12, 47, 0.18);
+}
+
+/* Cover Image Placeholder */
+.library-card-img-wrapper {
+  width: 100%;
+  height: 227px;
+  overflow: hidden;
+  background-color: #e3effd;
+  position: relative;
+}
+
+.library-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.library-card:hover .library-card-img {
+  transform: scale(1.05);
+}
+
+/* Fallback cover content in case images aren't loaded */
+.library-card-img-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #013475 0%, #005ed6 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card Body Section */
+.library-card-body {
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.library-card-title {
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 24px;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 48px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.library-card-title:hover {
+  color: var(--secondary-color);
+}
+
+.library-card-desc {
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  color: #4e4e4e;
+  line-height: 22px;
+  margin-bottom: auto; /* Pushes the footer to the bottom */
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 66px;
+}
+
+/* Card Footer Layout */
+.library-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.library-card-date-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.library-card-date-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pagination Container & Elements */
+.library-pagination-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.library-pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+  align-items: center;
+}
+
+.library-page-item {
+  display: inline-block;
+}
+
+.library-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #dfe3e8;
+  border-radius: 4px;
+  color: rgba(38, 38, 38, 0.6);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.library-page-link:hover {
+  background-color: #f5f5f5;
+  border-color: #c4cdd5;
+  color: rgba(38, 38, 38, 0.8);
+}
+
+.library-page-item.active .library-page-link {
+  background-color: #ffffff;
+  border: 1.5px solid #007bc1;
+  color: #007bc1;
+}
+
+.library-page-item.disabled .library-page-link {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .library-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .library-search-container {
+    max-width: 100%;
+  }
+  .library-title {
+    font-size: 28px;
+  }
+}
