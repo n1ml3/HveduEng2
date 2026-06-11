@@ -256,16 +256,26 @@
 }
 
 @media (max-width: 991px) {
+  .about-hvg-section {
+    padding: 20px 0;
+  }
+
   .about-hvg-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 50px;
+    gap: 10px;
   }
 
   .about-hvg-content {
     max-width: 100%;
     align-items: center;
+  }
+
+  .about-hvg-visual {
+    flex: none;
+    width: 500px;
+    height: 400px;
   }
 
   .about-features {
@@ -281,10 +291,11 @@
 
 @media (max-width: 767px) {
   .about-hvg-section {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 
   .about-hvg-visual {
+    flex: none;
     width: 100%;
     max-width: 340px;
     height: 300px;
@@ -328,6 +339,46 @@
 
   .about-title {
     font-size: 28px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE - Mobile S (≤340px)
+   ======================================== */
+@media (max-width: 340px) {
+  .about-hvg-visual {
+    max-width: 280px !important;
+    height: 250px !important;
+  }
+
+  .about-img-primary {
+    width: 190px !important;
+    height: 170px !important;
+  }
+
+  .about-img-secondary {
+    top: 100px !important;
+    left: 100px !important;
+    width: 160px !important;
+    height: 120px !important;
+    border-width: 3px !important;
+  }
+
+  .about-card-badge {
+    left: 185px !important;
+    width: 95px !important;
+    height: 120px !important;
+    padding: 8px !important;
+  }
+
+  .about-badge-value {
+    font-size: 20px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .about-badge-label {
+    font-size: 9px !important;
+    line-height: 1.1 !important;
   }
 }
 
