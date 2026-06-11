@@ -557,6 +557,10 @@
     align-items: center;
   }
 
+  .vision-mission-section {
+    padding: 20px 0;
+  }
+
   .vision-mission-visual {
     flex: none;
     width: 100%;
@@ -571,10 +575,6 @@
 }
 
 @media (max-width: 767px) {
-  .vision-mission-section {
-    padding: 60px 0;
-  }
-
   .vision-mission-visual {
     height: 250px;
   }

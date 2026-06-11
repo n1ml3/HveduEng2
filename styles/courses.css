@@ -667,6 +667,10 @@
 
 /* Responsive adjustment */
 @media (max-width: 767px) {
+  .courses-grid-section {
+    padding: 20px 0;
+  }
+
   .courses-cards-grid {
     grid-template-columns: 1fr;
     gap: 20px;
