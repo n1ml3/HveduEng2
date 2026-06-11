@@ -24,6 +24,8 @@
   <link href="../styles/topbar.css" rel="stylesheet">
   <link href="../styles/navbar.css" rel="stylesheet">
   <link href="../styles/footer.css" rel="stylesheet">
+  <link href="../styles/breadcrumb.css" rel="stylesheet">
+  <link href="../styles/calendar.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,9 +35,112 @@
     <div id="topbar-placeholder"></div>
     <div id="navbar-placeholder"></div>
   </header>
+  <!-- Breadcrumb Header Banner (Figma Node 1:2858) -->
+  <section class="breadcrumb-banner">
+    <div class="container">
+      <h1 class="breadcrumb-title">Lịch khai giảng</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="../index.html" class="breadcrumb-link">Trang chủ</a></li>
+          <li class="breadcrumb-separator">
+            <img src="../assets/arrow-right-filled.svg" alt="arrow right">
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lịch khai giảng</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
 
   <main>
-    <!-- Nội dung của trang Lịch khai giảng sẽ được chèn ở đây -->
+    <!-- Phần Lịch khai giảng (Figma Node 1:3232) -->
+    <section class="schedule-section">
+      <div class="container">
+        <!-- Tiêu đề chính và gạch chân trang trí -->
+        <div class="schedule-header">
+          <h2 class="schedule-title">Lịch khai giảng tháng 4 tại <span class="text-highlight">HVG Education</span></h2>
+          <div class="schedule-decor-line"></div>
+        </div>
+
+        <!-- Bọc bảng trong thẻ responsive của Bootstrap để hỗ trợ thanh cuộn ngang trên di động tránh tràn khung -->
+        <div class="schedule-table-card">
+          <div class="table-responsive">
+            <table class="table schedule-table align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">Mã lớp</th>
+                  <th scope="col">Cơ sở</th>
+                  <th scope="col">Đầu vào</th>
+                  <th scope="col">Đầu ra</th>
+                  <th scope="col">Khai giảng</th>
+                  <th scope="col">Lịch học</th>
+                  <th scope="col">Thời lượng</th>
+                  <th scope="col">Tình trạng</th>
+                  <th scope="col" class="col-register">Đăng ký</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Hàng lớp học 1 -->
+                <tr>
+                  <td>THH100</td>
+                  <td>Cơ sở 1</td>
+                  <td>Toeic &lt; 400</td>
+                  <td>Toeic 650+</td>
+                  <td>2025-04-20</td>
+                  <td>17h30-19h30</td>
+                  <td>2h</td>
+                  <td>Còn 8 slot</td>
+                  <td class="col-register">
+                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                  </td>
+                </tr>
+                <!-- Hàng lớp học 2 -->
+                <tr>
+                  <td>THH100</td>
+                  <td>Cơ sở 1</td>
+                  <td>Toeic &lt; 400</td>
+                  <td>Toeic 650+</td>
+                  <td>2025-04-20</td>
+                  <td>17h30-19h30</td>
+                  <td>2h</td>
+                  <td>Còn 8 slot</td>
+                  <td class="col-register">
+                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                  </td>
+                </tr>
+                <!-- Hàng lớp học 3 -->
+                <tr>
+                  <td>THH100</td>
+                  <td>Cơ sở 1</td>
+                  <td>Toeic &lt; 400</td>
+                  <td>Toeic 650+</td>
+                  <td>2025-04-20</td>
+                  <td>17h30-19h30</td>
+                  <td>2h</td>
+                  <td>Còn 8 slot</td>
+                  <td class="col-register">
+                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                  </td>
+                </tr>
+                <!-- Hàng lớp học 4 -->
+                <tr>
+                  <td>THH100</td>
+                  <td>Cơ sở 1</td>
+                  <td>Toeic &lt; 400</td>
+                  <td>Toeic 650+</td>
+                  <td>2025-04-20</td>
+                  <td>17h30-19h30</td>
+                  <td>2h</td>
+                  <td>Còn 8 slot</td>
+                  <td class="col-register">
+                    <a href="/index.html#lien-he" class="btn-register-table">Đăng ký</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Khai báo vùng chứa của Footer để tải động nội dung từ footer.html qua jQuery AJAX -->
