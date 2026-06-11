@@ -34,3 +34,132 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* 
+  ==========================================================================
+  HỆ THỐNG PHẢN HỒI TOÀN CỤC (GLOBAL RESPONSIVE DESIGN SYSTEM)
+  - Áp dụng từ màn hình Tablet trở xuống (max-width: 991.98px) và Mobile (max-width: 575.98px).
+  - Tối ưu hóa padding, margin, giảm cỡ chữ để cân đối giao diện trên các thiết bị di động.
+  - Sử dụng !important để đảm bảo ghi đè các giá trị cứng (fixed) của từng component.
+  ==========================================================================
+*/
+
+/* --- TABLET VÀ DƯỚI TABLET (max-width: 991.98px) --- */
+@media (max-width: 991.98px) {
+  /* 1. Tối ưu padding cho toàn bộ các Section chính */
+  .about-hvg-section,
+  .vision-mission-section,
+  .courses-section,
+  .courses-grid-section,
+  .course-detail-banner,
+  .course-detail-section,
+  .schedule-section,
+  .library-section,
+  .knowledge-section,
+  .reasons-section,
+  .teachers-section,
+  .faq-section,
+  .consultation-section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  
+  /* 2. Điều chỉnh kích thước tiêu đề chính các trang/section */
+  .about-title,
+  .courses-title,
+  .course-detail-title,
+  .course-block-title,
+  .schedule-title,
+  .library-title,
+  .knowledge-title,
+  .reasons-title,
+  .teachers-title,
+  .faq-title,
+  .consultation-title {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Tiêu đề phụ/nhỏ */
+  .vision-box-title,
+  .mission-box-title,
+  .info-card-title {
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .library-card-title,
+  .knowledge-card-title,
+  .reason-card-title,
+  .course-item-card-title {
+    font-size: 16px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* 3. Tối ưu hóa margin/padding của các header section */
+  .schedule-header,
+  .knowledge-header,
+  .reasons-header,
+  .teachers-header,
+  .faq-header,
+  .library-header-row {
+    margin-bottom: 32px !important;
+  }
+}
+
+/* --- MOBILE (max-width: 575.98px) --- */
+@media (max-width: 575.98px) {
+  /* 1. Tiết kiệm không gian thêm trên màn hình điện thoại di động */
+  .about-hvg-section,
+  .vision-mission-section,
+  .courses-section,
+  .courses-grid-section,
+  .course-detail-banner,
+  .course-detail-section,
+  .schedule-section,
+  .library-section,
+  .knowledge-section,
+  .reasons-section,
+  .teachers-section,
+  .faq-section,
+  .consultation-section {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  /* 2. Thu nhỏ tiêu đề chính phù hợp màn hình nhỏ */
+  .about-title,
+  .courses-title,
+  .course-detail-title,
+  .course-block-title,
+  .schedule-title,
+  .library-title,
+  .knowledge-title,
+  .reasons-title,
+  .teachers-title,
+  .faq-title,
+  .consultation-title {
+    font-size: 22px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Tiêu đề phụ/nhỏ */
+  .vision-box-title,
+  .mission-box-title,
+  .info-card-title {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* 3. Thu nhỏ margin/padding header section */
+  .schedule-header,
+  .knowledge-header,
+  .reasons-header,
+  .teachers-header,
+  .faq-header,
+  .library-header-row {
+    margin-bottom: 24px !important;
+  }
+}
