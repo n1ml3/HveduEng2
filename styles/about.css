@@ -334,7 +334,7 @@
   .about-features {
     flex-direction: column;
     gap: 24px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .about-title {
