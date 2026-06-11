@@ -222,6 +222,10 @@
     padding: 0 20px;
   }
 
+  .reasons-header {
+    margin-bottom: 24px; /* Giảm margin giữa header và các card ở dưới */
+  }
+
   .reasons-grid {
     flex-direction: column;
     align-items: center;

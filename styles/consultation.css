@@ -258,7 +258,7 @@
 
   .consultation-visual {
     max-width: 380px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .consultation-decor-circle {
@@ -310,5 +310,6 @@
 
   .consultation-visual {
     max-width: 280px;
+    margin-top: 0px;
   }
 }
