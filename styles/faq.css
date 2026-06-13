@@ -195,6 +195,19 @@
 }
 
 /* ========================================
+   RESPONSIVE - Laptop (Màn hình 1024px)
+   ======================================== */
+
+@media (min-width: 992px) and (max-width: 1024px) {
+  .faq-classroom-img {
+    width: 500px;
+    height: 300px;
+    right: 10px;
+    top: 130px;
+  }
+}
+
+/* ========================================
    RESPONSIVE - Tablet (Màn hình dưới 992px)
    ======================================== */
 
