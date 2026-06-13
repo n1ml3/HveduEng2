@@ -459,6 +459,30 @@
    RESPONSIVE - Mobile M & S (≤375.98px)
    ======================================== */
 @media (max-width: 375.98px) {
+  .hero-bg-image {
+    object-position: 75%; /* Dịch ngang 75% và dịch dọc xuống 30px */
+  }
+
+  .hero-content {
+    padding-top: 35px; /* Đẩy toàn bộ khối nội dung lên phía trên */
+  }
+
+  .hero-headline-box {
+    padding: 6px 10px; /* Giảm padding của hộp nền trắng để gọn gàng hơn */
+    margin-bottom: 12px;
+  }
+
+  .hero-headline {
+    font-size: 18px; /* Thu nhỏ chữ tiêu đề chính */
+    line-height: 28px;
+  }
+
+  .hero-subheadline {
+    font-size: 18px; /* Thu nhỏ chữ dòng phụ đề */
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+
   .hero-cta-group {
     flex-wrap: nowrap !important; /* Giữ 2 nút trên cùng một hàng */
     gap: 8px !important; /* Giảm khoảng cách gap giữa 2 nút */
