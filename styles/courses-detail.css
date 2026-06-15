@@ -259,6 +259,10 @@
 }
 
 @media (max-width: 576px) {
+  .course-detail-banner {
+    padding: 40px 0 20px;
+  }
+  
   .course-feature-image {
     height: 200px;
   }
@@ -302,7 +306,7 @@
 
 @media (max-width: 991px) {
   .course-detail-banner {
-    padding: 60px 0;
+    padding: 60px 0 30px;
   }
   
   .course-detail-title {
