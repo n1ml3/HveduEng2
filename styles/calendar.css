@@ -62,7 +62,7 @@
   font-size: 15px; /* Giảm cỡ chữ để bảng gọn gàng hơn, tránh tràn khung */
   font-weight: 500; /* Font medium chuẩn thiết kế */
   padding: 14px 12px; /* Giảm padding trên dưới và trái phải */
-  text-align: left;
+  text-align: center;
   border: none;
   box-shadow: none; /* Triệt tiêu bóng đổ chèn của Bootstrap */
   white-space: nowrap; /* Ngăn chặn xuống dòng gây méo bảng */
@@ -85,6 +85,7 @@
   color: rgba(50, 50, 50, 0.95); /* Tông xám đậm dễ nhìn */
   border-bottom: 1px solid rgba(0, 174, 239, 0.1); /* Đường viền ngang mờ phân chia các hàng */
   vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+  text-align: center;
   background-color: #ffffff;
   box-shadow: none; /* Triệt tiêu màu phủ nền mặc định của Bootstrap */
   white-space: normal; /* Cho phép tự động xuống dòng khi màn hình hẹp */
