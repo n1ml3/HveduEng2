@@ -185,6 +185,10 @@
     margin-bottom: 24px;
   }
 
+  .reasons-header {
+    margin-bottom: 24px;
+  }
+
   /* Chuyển grid thành flex-wrap để tự xuống dòng, gap thu hẹp còn 30px */
   .reasons-grid {
     flex-wrap: wrap;
