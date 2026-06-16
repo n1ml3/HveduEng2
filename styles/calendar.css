@@ -169,6 +169,10 @@
 
 /* Trình duyệt màn hình trung bình (dưới 992px) */
 @media (max-width: 992px) {
+  .schedule-header {
+    margin-bottom: 24px;
+  }
+
   .schedule-section {
     /* Giảm padding trên màn hình tablet */
     padding: 40px 0;
@@ -256,7 +260,7 @@
   }
 
   .schedule-header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   /* Điều chỉnh cỡ chữ và padding nhỏ hơn một chút trên màn hình cực nhỏ để hiển thị tối ưu */
