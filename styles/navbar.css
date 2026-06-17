@@ -93,9 +93,7 @@
   
   .nav-link-custom:hover, 
   .nav-link-custom.active {
-    background-color: var(--accent-light, #ebf8ff);
     color: var(--secondary-color, #005ed6) !important;
-    padding-left: 24px !important; /* Micro-animation trượt nhẹ sang phải khi hover/active */
   }
   
   .navbar-custom .dropdown-menu {
