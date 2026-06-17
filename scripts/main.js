@@ -138,3 +138,36 @@ $(document).on("click", ".faq-header", function() {
     answer.css("max-height", answer[0].scrollHeight + "px");
   }
 });
+
+/*
+  Course Program Item Click Handler:
+  - Khi người dùng click vào một mục khóa học (.course-program-item), làm sáng mục đó bằng class 'active'.
+  - Loại bỏ trạng thái 'active' của mục cũ.
+  - Đồng thời hoán đổi icon puzzle (màu xanh cho active, màu trắng cho inactive).
+*/
+$(document).on("click", ".course-program-item", function() {
+  const currentActive = $(".course-program-item.active");
+  
+  // Nếu click vào mục đang active thì bỏ qua
+  if (currentActive.is(this)) return;
+
+  // Tắt active của mục cũ và đổi icon của nó về trắng
+  if (currentActive.length > 0) {
+    currentActive.removeClass("active");
+    const activeIcon = currentActive.find(".course-program-icon");
+    const activeSrc = activeIcon.attr("src");
+    if (activeSrc && !activeSrc.includes("-white.svg")) {
+      activeIcon.attr("src", activeSrc.replace(".svg", "-white.svg"));
+    }
+  }
+
+  // Bật active cho mục mới và đổi icon của nó thành màu xanh (không có -white)
+  const newItem = $(this);
+  newItem.addClass("active");
+  const newIcon = newItem.find(".course-program-icon");
+  const newSrc = newIcon.attr("src");
+  if (newSrc && newSrc.includes("-white.svg")) {
+    newIcon.attr("src", newSrc.replace("-white.svg", ".svg"));
+  }
+});
+

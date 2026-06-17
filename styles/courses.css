@@ -315,6 +315,12 @@
   gap: 16px;
   color: var(--white, #ffffff);
   flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.course-program-item:not(.active):hover {
+  opacity: 0.8;
 }
 
 /*
