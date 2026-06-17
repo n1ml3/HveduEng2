@@ -317,10 +317,13 @@
   flex-shrink: 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 11px 24px;
+  border-radius: 10px;
 }
 
 .course-program-item:not(.active):hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /*
@@ -329,8 +332,6 @@
 */
 .course-program-item.active {
   background-color: var(--white, #ffffff);
-  border-radius: 10px;
-  padding: 11px 24px;
   color: var(--primary-color, #013475);
 }
 
@@ -490,7 +491,7 @@
     display: none;
   }
 
-  .course-program-item.active {
+  .course-program-item {
     justify-content: center;
   }
 }
